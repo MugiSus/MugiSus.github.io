@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { format } from 'date-fns'
 import styles from '../styles/Home.module.scss'
 
-import articlesYML from '../data/articles.yml'
+import articlesYaml from '../data/articles.yml'
+import careersYaml from '../data/careers.yml'
 
 const Home = () => (
     <div>
@@ -64,16 +66,16 @@ const Home = () => (
 
                 <ul className={styles.articlesUl}>
                     {
-                        articlesYML.map(article => (
-                            <a href={article.url}>
-                                <li>
-                                    <span>
-                                        <span className={styles.articleDate}>{article.date}</span><br />
+                        articlesYaml.map((article, index) => (
+                            <li key={index}>
+                                <a href={article.url}>
+                                    <div>
+                                        <time className={styles.articleDate}>{format(article.date, 'yyyy.MM.dd')}</time><br />
                                         <span>{article.title}</span>
-                                    </span>
+                                    </div>
                                     <span className={`material-icons-outlined ${styles.articleIcon}`}>arrow_forward</span>
-                                </li>
-                            </a>
+                                </a>
+                            </li>
                         ))
                     }
                 </ul>
@@ -85,19 +87,15 @@ const Home = () => (
                     <h2 className={styles.subtitle}>More about me</h2>
                 </div>
 
-                <ul className={styles.careerUl}>
-                    <li>
-                        <time>2003.05.05</time>
-                        <span>うまれる</span>
-                    </li>
-                    <li>
-                        <time>2008.04.29</time>
-                        <span>そだつ</span>
-                    </li>
-                    <li>
-                        <time>2022.04.22</time>
-                        <span>いま</span>
-                    </li>
+                <ul className={styles.careersUl}>
+                    {
+                        careersYaml.map((career, index) => (
+                            <li key={index}>
+                                <time>{format(career.date, 'yyyy.MM.dd')}</time>
+                                <span>{career.content}</span>
+                            </li>
+                        ))
+                    }
                 </ul>
             </div>
         </main>

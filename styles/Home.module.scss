@@ -75,8 +75,8 @@
 	line-height: 1.5rem;
 	letter-spacing: 0.05rem;
 
-	a {
-		li {
+	li {
+		a {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -86,6 +86,7 @@
 
 			.articleDate {
 				opacity: 75%;
+				line-height: 0;
 				font-variant: tabular-nums;
 				font-size: 0.75rem;
 				font-weight: 700;
@@ -96,19 +97,19 @@
 			}
 		}
 
-		&:nth-child(even) li {
+		&:nth-child(even) a {
 			background: #E3DEF2;
 			color: #685F82;
 		}
 		
-		&:nth-child(odd) li {
+		&:nth-child(odd) a {
 			background: #E4F3D0;
 			color: #6E8C46;
 		}
 	}
 }
 
-.careerUl {
+.careersUl {
 	margin: 0;
     padding: 0;
     list-style: none;
