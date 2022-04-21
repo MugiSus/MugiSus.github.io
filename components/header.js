@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import styles from '../styles/Header.module.scss'
 
 const Header = () => (
@@ -7,7 +6,7 @@ const Header = () => (
             <span className={`material-icons-outlined ${styles.icons}`}>menu</span>
             <div className={styles.title}>MugiSus.com</div>
             <span className={`material-icons-outlined ${styles.icons}`}>share</span>
-            
+
             <div className={styles.background} />
         </header>
 

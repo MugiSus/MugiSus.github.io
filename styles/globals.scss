@@ -16,7 +16,7 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: Outfit;
+	font-family: Outfit, 'Zen Kaku Gothic New';
 	user-select: none;
 	color: var(--color-content);
 }
@@ -37,7 +37,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 20%;
+    opacity: 10%;
     background-image: var(--image-bg);
 	background-repeat: repeat;
     background-size: 100vw 400vw;
