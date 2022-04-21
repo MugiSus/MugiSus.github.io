@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { format } from 'date-fns'
+import { format as dateformat } from 'date-fns'
 import styles from '../styles/Home.module.scss'
 
 import articlesYaml from '../data/articles.yml'
@@ -70,7 +70,7 @@ const Home = () => (
                             <li key={index}>
                                 <a href={article.url}>
                                     <div>
-                                        <time className={styles.articleDate}>{format(article.date, 'yyyy.MM.dd')}</time><br />
+                                        <time>{dateformat(article.date, 'yyyy.MM.dd')}</time><br />
                                         <span>{article.title}</span>
                                     </div>
                                     <span className={`material-icons-outlined ${styles.articleIcon}`}>arrow_forward</span>
@@ -91,7 +91,7 @@ const Home = () => (
                     {
                         careersYaml.map((career, index) => (
                             <li key={index}>
-                                <time>{format(career.date, 'yyyy.MM.dd')}</time>
+                                <time>{dateformat(career.date, 'yyyy.MM.dd')}</time>
                                 <span>{career.content}</span>
                             </li>
                         ))
