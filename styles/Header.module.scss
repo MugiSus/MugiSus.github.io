@@ -1,0 +1,44 @@
+$height: 4rem;
+
+.container {
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: $height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-blank);
+}
+
+.background {
+    z-index: -1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 50%;
+    background-image: var(--image-bg);
+    background-size: 16rem 16rem;
+    background-position: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    text-align: center;
+    padding: 0.5rem 0;
+    font-weight: 400;
+}
+
+.icons {
+    font-size: 1.75rem;
+    margin: 0 1.25rem
+}
+
+.placeholder {
+    height: $height;
+}

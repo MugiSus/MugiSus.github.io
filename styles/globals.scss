@@ -1,0 +1,44 @@
+:root {
+	--color-light-green: #BBE289;
+	--color-light-purple: #B9ACDE;
+	--color-light-blank: #FDFDFD;
+	--color-light-content: #080808;
+	--image-light-bg: url('../public/bg-light.svg');
+
+	--color-green: var(--color-light-green);
+	--color-purple: var(--color-light-purple);
+	--color-blank: var(--color-light-blank);
+	--color-content: var(--color-light-content);
+	--image-bg: var(--image-light-bg);
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Outfit;
+	user-select: none;
+	color: var(--color-content);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.background {
+    z-index: -100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 20%;
+    background-image: var(--image-bg);
+	background-repeat: repeat;
+    background-size: 100vw 400vw;
+}

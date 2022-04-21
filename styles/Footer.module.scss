@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+}
+
+.copyright {
+    font-size: 1.2rem;
+    color: var(--color-content);
+    letter-spacing: 0.15rem;
+    opacity: 0.5;
+}

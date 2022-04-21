@@ -1,0 +1,59 @@
+.main {
+	margin: 0 auto;
+	width: 80vw;
+	max-width: 1000px;
+	min-height: 100vh;
+}
+
+.sections {
+	margin: 3rem 0;
+}
+
+.title {
+	display: inline-block;
+	font-weight: 600;
+	font-size: 3.6rem;
+	letter-spacing: 0.2rem;
+	margin: 1rem 0;
+}
+
+.subtitle {
+	display: inline-block;
+	margin-left: 2.5rem;
+	font-weight: 400;
+	font-size: 1.8rem;
+	letter-spacing: 0.1rem;
+}
+
+.text {
+	font-family: 'Zen Kaku Gothic New';
+	font-size: 1.2rem;
+	letter-spacing: 0.05rem;
+	line-height: 2.4rem;
+	margin: 1.8rem 0rem;
+
+	.code {
+		font-family: Inconsolata;
+		background-color: #E4E8DF80;
+		padding: 0.3rem 0.4rem;
+		margin: 0 0.5rem;
+		border-radius: 0.2rem;
+	}
+}
+
+.oyagiIconContainer {
+	display: inline-block;
+	padding: 0.3rem;
+	border-radius: 0.8rem;
+	margin: 0.6rem 0;
+	background-color: var(--color-blank);
+	line-height: 0;
+	z-index: -9999;
+
+	.oyagiIconBorder {
+		padding: 0.8rem;
+		border-radius: 0.5rem;
+		background: var(--image-bg);
+		background-size: cover;
+	}
+}
