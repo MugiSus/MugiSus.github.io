@@ -28,12 +28,13 @@
 .text {
 	font-family: 'Zen Kaku Gothic New';
 	font-size: 1.2rem;
+	font-weight: 400;
 	letter-spacing: 0.05rem;
 	line-height: 2.4rem;
 	margin: 1.8rem 0rem;
 
 	.code {
-		font-family: Inconsolata;
+		font-family: Inconsolata, 'Zen Kaku Gothic New';
 		background-color: #E4E8DF80;
 		padding: 0.3rem 0.4rem;
 		margin: 0 0.5rem;
