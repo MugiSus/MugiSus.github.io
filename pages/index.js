@@ -68,7 +68,7 @@ const Home = () => (
                             <a href={article.url}>
                                 <li>
                                     <span>
-                                        <span className={styles.articleDate}>{article.date}:</span><br />
+                                        <span className={styles.articleDate}>{article.date}</span><br />
                                         <span>{article.title}</span>
                                     </span>
                                     <span className={`material-icons-outlined ${styles.articleIcon}`}>arrow_forward</span>
