@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { format as dateformat } from 'date-fns'
 import styles from '../styles/CreationComponent.module.scss'
 
-const CreationComponent = ({ url, image, title, date, description }) => (
+const CreationComponent = ({ url, image, title, date, description, wip }) => (
     <div className={styles.container}>
         <Link href={url}>
             <a>
@@ -13,7 +13,7 @@ const CreationComponent = ({ url, image, title, date, description }) => (
                         <time>{dateformat(date, 'yyyy.MM.dd')}</time><br />
                         <span>{title}</span>
                     </div>
-                    <span className={`material-icons-outlined ${styles.articleIcon}`}>arrow_forward</span>
+                    <span className={`material-icons-outlined ${styles.articleIcon}`}>{wip ? "videogame_asset_off" : "arrow_forward"}</span>
                 </div>
             </a>
         </Link>

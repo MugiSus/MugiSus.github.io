@@ -3,7 +3,7 @@
 #   title: string
 #   date: Date, date
 #   description: string
-#   iswip: boolean, optional # if so, show icon 'videogame_asset_off'
+#   wip: boolean, optional
 
 -
     url: https://www.mugisus.com/neighbours/
