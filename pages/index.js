@@ -27,7 +27,7 @@ const Home = () => (
 
                 <ul className={styles.creationUl}>
                     {
-                        creationsYaml.sort((a, b) => a.date.getTime() - b.date.getTime()).map((creation, index) => (
+                        creationsYaml.sort((a, b) => b.date.getTime() - a.date.getTime()).map((creation, index) => (
                             <article key={index}>
                                 <CreationComponent {...creation} />
                             </article>
@@ -42,9 +42,15 @@ const Home = () => (
                     <h2 className={styles.subtitle}>Coming soon, i bet</h2>
                 </div>
 
+                <p className={styles.text}>
+                    記事リンクを登録するのがめんどくさくて手をつけていません。<br />
+                    今並んでるのは一時的なものです。近いうちに本当に記事が並ぶと思います。<br />
+                    今はクリックしても Google とかに飛ぶだけです。
+                </p>
+
                 <ul className={styles.articlesUl}>
                     {
-                        articlesYaml.sort((a, b) => a.date.getTime() - b.date.getTime()).map((article, index) => (
+                        articlesYaml.sort((a, b) => b.date.getTime() - a.date.getTime()).map((article, index) => (
                             <article key={index}>
                                 <Link href={article.url}>
                                     <a>

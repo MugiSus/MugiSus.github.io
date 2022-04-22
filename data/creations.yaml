@@ -9,46 +9,16 @@
     image: neighbours.png
     title: neighbours
     date: 2022-04-12
-    description: 近い粒子と粒子が線で結ばれるよくあるやつです
-# -
-#     url: https://www.mugisus.com/neighbours/
-#     image: neighbours.png
-#     title: neighbours
-#     date: 2022-04-12
-#     description: 近い粒子と粒子が線で結ばれるよくあるやつです
-# -
-#     url: https://www.mugisus.com/neighbours/
-#     image: neighbours.png
-#     title: neighbours
-#     date: 2022-04-12
-#     description: 近い粒子と粒子が線で結ばれるよくあるやつです
-# -
-#     url: https://www.mugisus.com/neighbours/
-#     image: neighbours.png
-#     title: neighbours
-#     date: 2022-04-12
-#     description: 近い粒子と粒子が線で結ばれるよくあるやつです
-# -
-#     url: https://www.mugisus.com/neighbours/
-#     image: neighbours.png
-#     title: neighbours
-#     date: 2022-04-12
-#     description: 近い粒子と粒子が線で結ばれるよくあるやつです
-# -
-#     url: https://www.mugisus.com/neighbours/
-#     image: neighbours.png
-#     title: neighbours
-#     date: 2022-04-12
-#     description: 近い粒子と粒子が線で結ばれるよくあるやつです
-# -
-#     url: https://www.mugisus.com/neighbours/
-#     image: neighbours.png
-#     title: neighbours
-#     date: 2022-04-12
-#     description: 近い粒子と粒子が線で結ばれるよくあるやつです
-# -
-#     url: https://www.mugisus.com/neighbours/
-#     image: neighbours.png
-#     title: neighbours
-#     date: 2022-04-12
-#     description: 近い粒子と粒子が線で結ばれるよくあるやつです
+    description: 近い粒子と粒子が線で結ばれるよくあるやつです。
+-
+    url: https://www.mugisus.com/lifegameJS/
+    image: lifegameJS.png
+    title: lifegameJS
+    date: 2021-12-24
+    description: ライフゲームです。WebGLで実装してるのでかなり速いです。
+-
+    url: https://telport.mugisus.com/
+    image: telport.png
+    title: TELPort/テルポート
+    date: 2021-11-03
+    description: 2021年度未踏ジュニアで採択されたプロジェクトです。
