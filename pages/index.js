@@ -7,7 +7,8 @@ import styles from '../styles/Home.module.scss'
 import creationsYaml from '../data/creations.yaml'
 import articlesYaml from '../data/articles.yaml'
 import careersYaml from '../data/careers.yaml'
-import CreationComponent from '../components';
+
+import CreationComponent from '../components/creationComponent.js';
 
 const Home = () => (
     <div>
@@ -20,7 +21,7 @@ const Home = () => (
         <main className={styles.main}>
             <div className={styles.sections} id="creations">
                 <div className={styles.titleContainer}>
-                    <h1 className={styles.title}>MugiSus's Creations</h1>
+                    <h1 className={styles.title}>MugiSus&apos;s Creations</h1>
                     <h2 className={styles.subtitle}>Artworks & Products</h2>
                 </div>
 
