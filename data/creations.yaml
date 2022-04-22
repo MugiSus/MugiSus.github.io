@@ -1,8 +1,9 @@
-# - url: creation-url
-#   image: creation-image
-#   title: creation-title
-#   date: creation-date
-#   description: creation-description
+# - url: string
+#   image: string
+#   title: string
+#   date: Date, date
+#   description: string
+#   iswip: boolean, optional # if so, show icon 'videogame_asset_off'
 
 -
     url: https://www.mugisus.com/neighbours/
