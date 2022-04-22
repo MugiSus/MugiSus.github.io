@@ -7,7 +7,15 @@
     transition: filter 0.2s ease;
     font-size: 0;
     
-    .creationPropsContainer {
+    .thumbnail {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 8 / 5;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .propsContainer {
         display: flex;
         margin: 0;
         padding: 0;
@@ -15,7 +23,7 @@
         align-items: center;
         padding: 0.8rem 1.2rem;
 
-        .creationProps {
+        .props {
             time {
                 font-family: Outfit;
                 font-variant: tabular-nums;

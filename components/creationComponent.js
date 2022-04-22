@@ -3,13 +3,13 @@ import Link from 'next/link'
 import { format as dateformat } from 'date-fns'
 import styles from '../styles/CreationComponent.module.scss'
 
-const CreationComponent = ({ url, image, title, date }) => (
+const CreationComponent = ({ url, image, title, date, description }) => (
     <div className={styles.container}>
         <Link href={url}>
             <a>
-                {/* <Image src={`/../public/creations/${image}`} alt={title} quality={80} height={500} width={800} objectFit="cover" /> */}
-                <div className={styles.creationPropsContainer}>
-                    <div className={styles.creationProps}>
+                <img src={`/creations/${image}`} alt={title} className={styles.thumbnail}/>
+                <div className={styles.propsContainer}>
+                    <div className={styles.props}>
                         <time>{dateformat(date, 'yyyy.MM.dd')}</time><br />
                         <span>{title}</span>
                     </div>
