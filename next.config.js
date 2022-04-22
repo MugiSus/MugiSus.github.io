@@ -11,6 +11,5 @@ module.exports = {
 		)
 		return config
 	},
-    basePath: process.env.GITHUB_ACTIONS ? "/mugisus.com" : "",
     trailingSlash: true,
 }
