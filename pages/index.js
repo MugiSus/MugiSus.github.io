@@ -4,11 +4,11 @@ import Link from 'next/link'
 import { format as dateformat } from 'date-fns'
 import styles from '../styles/Home.module.scss'
 
+import CreationComponent from '../components/creationComponent.js';
+
 import creationsYaml from '../data/creations.yaml'
 import articlesYaml from '../data/articles.yaml'
 import careersYaml from '../data/careers.yaml'
-
-import CreationComponent from '../components/creationComponent.js';
 
 const Home = () => (
     <div>
