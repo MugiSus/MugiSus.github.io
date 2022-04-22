@@ -7,7 +7,7 @@ const CreationComponent = ({ url, image, title, date }) => (
     <div className={styles.container}>
         <Link href={url}>
             <a>
-                <Image src={`/../public/creations/${image}`} alt={title} quality={80} height={500} width={800} objectFit="cover" />
+                {/* <Image src={`/../public/creations/${image}`} alt={title} quality={80} height={500} width={800} objectFit="cover" /> */}
                 <div className={styles.creationPropsContainer}>
                     <div className={styles.creationProps}>
                         <time>{dateformat(date, 'yyyy.MM.dd')}</time><br />

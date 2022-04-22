@@ -88,7 +88,7 @@ const Home = () => (
 
                 <div className={styles.oyagiIconContainer}>
                     <div className={styles.oyagiIconBorder}>
-                        <Image src="/../public/oyagi-icon.png" alt="MugiSus" height={192} width={192} className={styles.oyagiIcon} />
+                        {/* <Image src="/../public/oyagi-icon.png" alt="MugiSus" height={192} width={192} className={styles.oyagiIcon} /> */}
                     </div>
                 </div>
             </div>
