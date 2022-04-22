@@ -1,0 +1,41 @@
+.container a {
+    display: block;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    border: 1px solid #C0C0C0;
+    background-color: var(--color-blank);
+    transition: filter 0.2s ease;
+    font-size: 0;
+    
+    .creationPropsContainer {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem 1.2rem;
+
+        .creationProps {
+            time {
+                font-family: Outfit;
+                font-variant: tabular-nums;
+                font-size: 0.8rem;
+                font-weight: 700;
+                opacity: 0.4;
+            }
+
+            span {
+                font-size: 1.2rem;
+            }
+        }
+
+        .articleIcon {
+            color: var(--color-content);
+            opacity: 0.4;
+        }
+    }
+
+    &:hover {
+        filter: brightness(0.9);
+    }
+}

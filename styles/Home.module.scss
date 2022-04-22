@@ -72,52 +72,8 @@
     padding: 0;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 1rem;
-	gap: 1rem;
-
-	article a {
-		display: block;
-		border-radius: 0.4rem;
-		overflow: hidden;
-		border: 1px solid #C0C0C0;
-		background-color: var(--color-blank);
-		transition: filter 0.2s ease;
-		font-size: 0;
-		
-		.creationPropsContainer {
-			display: flex;
-			margin: 0;
-			padding: 0;
-			justify-content: space-between;
-			align-items: center;
-
-			.creationProps {
-				padding: 0.8rem;
-	
-				time {
-					font-family: Outfit;
-					font-variant: tabular-nums;
-					font-size: 0.8rem;
-					font-weight: 700;
-					opacity: 0.4;
-				}
-	
-				span {
-					font-size: 1.2rem;
-				}
-			}
-	
-			.articleIcon {
-				padding: 0.8rem;
-				color: var(--color-content);
-				opacity: 0.4;
-			}
-		}
-
-		&:hover {
-			filter: brightness(0.9);
-		}
-	}
+	grid-gap: 2rem;
+	gap: 2rem;
 }
 
 .articlesUl {

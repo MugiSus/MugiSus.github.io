@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Image from 'next/image'
 import { format as dateformat } from 'date-fns'
 import styles from '../styles/Home.module.scss'
@@ -6,6 +7,7 @@ import styles from '../styles/Home.module.scss'
 import creationsYaml from '../data/creations.yaml'
 import articlesYaml from '../data/articles.yaml'
 import careersYaml from '../data/careers.yaml'
+import CreationComponent from '../components';
 
 const Home = () => (
     <div>
@@ -16,7 +18,49 @@ const Home = () => (
         </Head>
 
         <main className={styles.main}>
-            <div className={styles.sections}>
+            <div className={styles.sections} id="creations">
+                <div className={styles.titleContainer}>
+                    <h1 className={styles.title}>MugiSus's Creations</h1>
+                    <h2 className={styles.subtitle}>Artworks & Products</h2>
+                </div>
+
+                <ul className={styles.creationUl}>
+                    {
+                        creationsYaml.sort((a, b) => a.date.getTime() - b.date.getTime()).map((creation, index) => (
+                            <article key={index}>
+                                <CreationComponent {...creation} />
+                            </article>
+                        ))
+                    }
+                </ul>
+            </div>
+            
+            <div className={styles.sections} id="articles">
+                <div className={styles.titleContainer}>
+                    <h1 className={styles.title}>Articles</h1>
+                    <h2 className={styles.subtitle}>Coming soon, i bet</h2>
+                </div>
+
+                <ul className={styles.articlesUl}>
+                    {
+                        articlesYaml.sort((a, b) => a.date.getTime() - b.date.getTime()).map((article, index) => (
+                            <article key={index}>
+                                <Link href={article.url}>
+                                    <a>
+                                        <div>
+                                            <time>{dateformat(article.date, 'yyyy.MM.dd')}</time><br />
+                                            <span>{article.title}</span>
+                                        </div>
+                                        <span className={`material-icons-outlined ${styles.articleIcon}`}>arrow_forward</span>
+                                    </a>
+                                </Link>
+                            </article>
+                        ))
+                    }
+                </ul>
+            </div>
+
+            <div className={styles.sections} id="mugisus">
                 <div className={styles.titleContainer}>
                     <h1 className={styles.title}>MugiSus</h1>
                     <h2 className={styles.subtitle}>Minato Masayuki</h2>
@@ -48,56 +92,7 @@ const Home = () => (
                 </div>
             </div>
 
-            <div className={styles.sections}>
-                <div className={styles.titleContainer}>
-                    <h1 className={styles.title}>Creations</h1>
-                    <h2 className={styles.subtitle}>Artworks & Production</h2>
-                </div>
-
-                <ul className={styles.creationUl}>
-                    {
-                        creationsYaml.sort((a, b) => a.date.getTime() - b.date.getTime()).map((creation, index) => (
-                            <article key={index}>
-                                <a href={creation.url}>
-                                    <Image src={`/../public/creations/${creation.image}`} alt={creation.title} height={500} width={800} objectFit="fill" />
-                                    <div className={styles.creationPropsContainer}>
-                                        <div className={styles.creationProps}>
-                                            <time>{dateformat(creation.date, 'yyyy.MM.dd')}</time><br />
-                                            <span>{creation.title}</span>
-                                        </div>
-                                        <span className={`material-icons-outlined ${styles.articleIcon}`}>arrow_forward</span>
-                                    </div>
-                                </a>
-                            </article>
-                        ))
-                    }
-                </ul>
-            </div>
-            
-            <div className={styles.sections}>
-                <div className={styles.titleContainer}>
-                    <h1 className={styles.title}>Articles</h1>
-                    <h2 className={styles.subtitle}>Coming soon, i bet</h2>
-                </div>
-
-                <ul className={styles.articlesUl}>
-                    {
-                        articlesYaml.sort((a, b) => a.date.getTime() - b.date.getTime()).map((article, index) => (
-                            <article key={index}>
-                                <a href={article.url}>
-                                    <div>
-                                        <time>{dateformat(article.date, 'yyyy.MM.dd')}</time><br />
-                                        <span>{article.title}</span>
-                                    </div>
-                                    <span className={`material-icons-outlined ${styles.articleIcon}`}>arrow_forward</span>
-                                </a>
-                            </article>
-                        ))
-                    }
-                </ul>
-            </div>
-
-            <div className={styles.sections}>
+            <div className={styles.sections} id="careers">
                 <div className={styles.titleContainer}>
                     <h1 className={styles.title}>Careers</h1>
                     <h2 className={styles.subtitle}>More about me</h2>
