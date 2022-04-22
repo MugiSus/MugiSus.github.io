@@ -1,5 +1,4 @@
 # https://jamband.github.io/blog/2021/08/deploy-nextjs-app-to-github-pages/
-
 name: Deploy to GitHub Pages
 
 # main ブランチ の push 時にこのワークフローを実行する
