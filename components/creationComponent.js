@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { format as dateformat } from 'date-fns'
 import styles from '../styles/CreationComponent.module.scss'
 
