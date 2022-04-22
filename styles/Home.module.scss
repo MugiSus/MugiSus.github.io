@@ -57,7 +57,7 @@
 	margin: 0.6rem 0;
 	background-color: var(--color-blank);
 	line-height: 0;
-	z-index: -9999;
+	z-index: -10000;
 
 	.oyagiIconBorder {
 		padding: 0.6rem;
@@ -68,7 +68,7 @@
 }
 
 .creationUl {
-	margin: 0;
+	margin: 2.5rem 0;
     padding: 0;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
