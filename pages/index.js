@@ -115,10 +115,6 @@ const Home = () => (
                         ))
                     }
                 </ul>
-
-                <p className={styles.text}>
-                    (ここも近いうちにちゃんと書きます)
-                </p>
             </div>
         </main>
     </div>
