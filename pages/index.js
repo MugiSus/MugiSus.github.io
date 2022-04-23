@@ -96,7 +96,7 @@ const Home = () => (
                     使用しているエディタは VSCode で、インデントはスペース4つです。
                 </p>
                 <p className={styles.text}>
-                    2021年度 U-17未踏ジュニア に「TELPort/テルポート」で採択されました。<br />
+                    2021年度 <Link href="https://jr.mitou.org">U-17未踏ジュニア</Link> に「<Link href="https://jr.mitou.org/projects/2021/telport">TELPort/テルポート</Link>」で採択されました。<br />
                     同年未踏ジュニアスーパークリエータ認定を受けています。
                 </p>
                 <p className={styles.text}>
