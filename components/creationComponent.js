@@ -20,8 +20,10 @@ const CreationComponent = ({ url, image, title, date, description, features }) =
                     </span>
                 </div>
                 <div className={styles.descriptionContainer}>
-                    <time>{dateformat(date, 'yyyy.MM.dd')}</time><br />
-                    <span>{title}</span>
+                    <div className={styles.props}>
+                        <time>{dateformat(date, 'yyyy.MM.dd')}</time><br />
+                        <span>{title}</span>
+                    </div>
                     <ul className={styles.featuresUl}>
                         {
                             (features ?? []).map(feature => (

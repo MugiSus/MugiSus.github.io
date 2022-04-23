@@ -16,7 +16,7 @@ work-in-progress:
 
 not-smartphone-compatible:
     icon: no_cell
-    description: Not smartphone compatible
+    description: No smartphone compatible
 
 awarded:
     icon: emoji_events

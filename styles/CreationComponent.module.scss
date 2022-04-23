@@ -61,21 +61,24 @@
         background-color: var(--color-blank);
         opacity: 0;
         font-size: 1rem;
-        padding: 2rem;
+        padding: 1.5rem;
+        overflow-y: scroll;
 
-        time {
-            font-family: Outfit;
-            font-variant: tabular-nums;
-            font-size: 1rem;
-            font-weight: 700;
-            opacity: 0.4;
-        }
-        
-        span {
-            font-weight: 500;
-            letter-spacing: 0.04rem;
-            font-size: 1.3rem;
-            text-overflow: ellipsis;
+        .props {
+            time {
+                font-family: Outfit;
+                font-variant: tabular-nums;
+                font-size: 0.8rem;
+                font-weight: 700;
+                opacity: 0.6;
+            }
+            
+            span {
+                font-weight: 500;
+                letter-spacing: 0.04rem;
+                font-size: 1.2rem;
+                text-overflow: ellipsis;
+            }
         }
 
         .featuresUl {
@@ -83,14 +86,14 @@
             padding: 0;
             opacity: 0.6;
             list-style: none;
-            line-height: 2.2rem;
+            line-height: 2rem;
             
             li {
                 display: flex;
                 align-items: center;
 
                 .featureIcon {
-                    font-size: 1.6rem;
+                    font-size: 1.5rem;
                     margin-right: 0.5rem;
                 }
 
@@ -105,6 +108,7 @@
             font-family: "Zen Kaku Gothic New";
             font-weight: 500;
             line-height: 2rem;
+            margin: 0;
         }
     }
 
