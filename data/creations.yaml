@@ -4,7 +4,7 @@
 #   title: string
 #   date: Date
 #   description: string
-#   icons: [string]; default: [arrow_forward]
+#   features: [string]
 #   pickup: boolean; default: false
 
 -
@@ -13,7 +13,7 @@
     title: neighbours
     date: 2022-04-12
     description: 近い粒子と粒子が線で結ばれるよくあるやつです。
-    icons: [smartphone, arrow_forward]
+    features: [responsive]
     pickup: true
 -
     url: https://www.mugisus.com/lifegameJS/
@@ -21,6 +21,7 @@
     title: lifegameJS
     date: 2021-12-24
     description: ライフゲームです。WebGLで実装してるのでかなり速いです。
+    features: [not-smartphone-compatible]
     pickup: true
 -
     url: https://telport.mugisus.com/
@@ -28,7 +29,7 @@
     title: TELPort/テルポート
     date: 2021-11-03
     description: 2021年度未踏ジュニアで採択されたプロジェクトです。
-    icons: [smartphone, arrow_forward]
+    features: [awarded, responsive]
     pickup: true
 -
     url: https://www.mugisus.com/misc/logicsim_v2/
@@ -37,6 +38,7 @@
     date: 2021-03-21
     description: canvasで描画する論理回路シミュレータの第二版です。UIはそのうちできます。
     pickup: true
+    features: [work-in-progress, not-smartphone-compatible]
 -
     url: https://www.mugisus.com/misc/LogicSim/
     image: creations/logicsim.png
@@ -62,7 +64,7 @@
     title: "[3D] Arrow & Ball with editor!"
     date: 2017-05-20
     description: 2017年にScratchで作成したパズルゲームの最終版です。ステージ作成機能とクラウド共有機能があります。
-    icons: [videogame_asset]
+    features: [made-in-scratch]
     pickup: true
 -
     url: https://scratch.mit.edu/projects/45872854/
@@ -70,5 +72,5 @@
     title: arrow & ball with editor!
     date: 2015-02-09
     description: 2015年(小学5年)にScratchで作成したパズルゲームの初版です。ステージ作成機能とクラウド共有機能があります。
-    icons: [videogame_asset]
+    features: [made-in-scratch]
     pickup: true

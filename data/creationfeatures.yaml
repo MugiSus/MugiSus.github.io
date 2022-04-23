@@ -1,0 +1,23 @@
+# name: string
+#   icon: string, google material icons
+#   description: string
+
+made-in-scratch:
+    icon: videogame_asset
+    description: Made in Scratch
+
+responsive:
+    icon: smartphone
+    description: Responsive
+
+work-in-progress:
+    icon: build
+    description: Work in progress
+
+not-smartphone-compatible:
+    icon: no_cell
+    description: Not smartphone compatible
+
+awarded:
+    icon: emoji_events
+    description: Awarded

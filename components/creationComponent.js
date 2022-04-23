@@ -2,7 +2,9 @@ import Link from 'next/link'
 import { format as dateformat } from 'date-fns'
 import styles from '../styles/CreationComponent.module.scss'
 
-const CreationComponent = ({ url, image, title, date, description, icons }) => (
+import creationfeaturesYaml from '../data/creationfeatures.yaml'
+
+const CreationComponent = ({ url, image, title, date, description, features }) => (
     <div className={styles.container}>
         <Link href={url}>
             <a>
@@ -12,9 +14,25 @@ const CreationComponent = ({ url, image, title, date, description, icons }) => (
                         <time>{dateformat(date, 'yyyy.MM.dd')}</time><br />
                         <span>{title}</span>
                     </div>
-                    <span className={`material-icons-outlined ${styles.icons}`}>
-                        {icons?.join("") ?? "arrow_forward"}
+                    <span className={`material-icons-outlined ${styles.propIcon}`}>
+                        {features?.map(feature => creationfeaturesYaml[feature]?.icon ?? "").join("") ?? ""}
+                        arrow_forward
                     </span>
+                </div>
+                <div className={styles.descriptionContainer}>
+                    <time>{dateformat(date, 'yyyy.MM.dd')}</time><br />
+                    <span>{title}</span>
+                    <ul className={styles.featuresUl}>
+                        {
+                            (features ?? []).map(feature => (
+                                <li key={feature}>
+                                    <span className={`material-icons-outlined ${styles.featureIcon}`}>{creationfeaturesYaml[feature]?.icon}</span>
+                                    <span className={styles.feature}>{creationfeaturesYaml[feature]?.description}</span>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                    <p className={styles.description}>{description}</p>
                 </div>
             </a>
         </Link>

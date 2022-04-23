@@ -3,16 +3,16 @@
     border-radius: 0.6rem;
     overflow: hidden;
     border: 1px solid #C0C0C0;
-    background-color: var(--color-blank);
-    transition: filter 0.2s ease;
     font-size: 0;
+    position: relative;
     
     .thumbnail {
+        left: 0;
         width: 100%;
-        height: 100%;
         aspect-ratio: 8 / 5;
         object-fit: cover;
         object-position: center;
+        transition: filter 0.2s ease;
     }
     
     .propsContainer {
@@ -23,7 +23,9 @@
         justify-content: space-between;
         align-items: center;
         padding: 0.6rem 1rem;
-
+        background-color: var(--color-blank);
+        transition: filter 0.2s ease;
+        
         .props {
             time {
                 font-family: Outfit;
@@ -40,15 +42,79 @@
                 text-overflow: ellipsis;
             }
         }
-
-        .icons {
-            letter-spacing: 0.4rem;
+        
+        .propIcon {
             color: var(--color-content);
+            font-size: 1.6rem;
+            letter-spacing: 0.25rem;
             opacity: 0.4;
         }
     }
 
+    .descriptionContainer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.2s ease;
+        background-color: var(--color-blank);
+        opacity: 0;
+        font-size: 1rem;
+        padding: 2rem;
+
+        time {
+            font-family: Outfit;
+            font-variant: tabular-nums;
+            font-size: 1rem;
+            font-weight: 700;
+            opacity: 0.4;
+        }
+        
+        span {
+            font-weight: 500;
+            letter-spacing: 0.04rem;
+            font-size: 1.3rem;
+            text-overflow: ellipsis;
+        }
+
+        .featuresUl {
+            margin: 1rem 0;
+            padding: 0;
+            opacity: 0.6;
+            list-style: none;
+            line-height: 2.2rem;
+            
+            li {
+                display: flex;
+                align-items: center;
+
+                .featureIcon {
+                    font-size: 1.6rem;
+                    margin-right: 0.5rem;
+                }
+
+                .feature {
+                    font-weight: 400;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        .description {
+            font-family: "Zen Kaku Gothic New";
+            font-weight: 500;
+            line-height: 2rem;
+        }
+    }
+
     &:hover {
-        filter: brightness(0.9);
+        .thumbnail, .propsContainer {
+            filter: brightness(0.9);
+        }
+
+        .descriptionContainer {
+            opacity: 1;
+        }
     }
 }
