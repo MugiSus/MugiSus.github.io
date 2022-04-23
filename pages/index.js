@@ -74,7 +74,7 @@ const Home = () => (
 
                 <p className={styles.text}>
                     国立木更津工業高等専門学校 情報工学科 の 18 歳です。<br />
-                    ハンドルネームは MugiSus で これは むぎすす と発音します。実は 麦煤 と書くこともあります。<br />
+                    ハンドルネームは MugiSus で これは むぎすす と発音します。麦煤 と書くこともあります。<br />
                     正規表現は<code>/MugiSus|むぎ(すす)?|麦煤?/gi</code>です。<br />
                 </p>
                 <p className={styles.text}>

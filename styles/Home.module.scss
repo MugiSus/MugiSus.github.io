@@ -1,7 +1,7 @@
 .main {
 	margin: 0 auto;
 	width: 90vw;
-	max-width: 1200px;
+	max-width: 900px;
 	min-height: 100vh;
 }
 
@@ -71,7 +71,7 @@
 	margin: 2.5rem 0;
     padding: 0;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-gap: 2rem;
 	gap: 2rem;
 }
@@ -141,12 +141,6 @@
 			font-weight: 500;
 			letter-spacing: 0.05rem;
 		}
-	}
-}
-
-@media screen and (max-width: 1180px) {
-	.creationUl {
-		grid-template-columns: 1fr 1fr;
 	}
 }
 
