@@ -2,7 +2,7 @@
 #   icon: string, google material icons
 #   description: string
 
-made-in-scratch:
+made-with-scratch:
     icon: videogame_asset
     description: Made with Scratch
 

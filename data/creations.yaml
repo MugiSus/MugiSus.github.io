@@ -64,7 +64,7 @@
     title: "[3D] Arrow & Ball with editor!"
     date: 2017-05-20
     description: 2017年にScratchで作成したパズルゲームの最終版です。ステージ作成機能とクラウド共有機能があります。
-    features: [made-in-scratch]
+    features: [made-with-scratch]
     pickup: true
 -
     url: https://scratch.mit.edu/projects/45872854/
@@ -72,5 +72,5 @@
     title: arrow & ball with editor!
     date: 2015-02-09
     description: 2015年(小学5年)にScratchで作成したパズルゲームの初版です。ステージ作成機能とクラウド共有機能があります。
-    features: [made-in-scratch]
+    features: [made-with-scratch]
     pickup: true
