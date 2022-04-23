@@ -88,20 +88,21 @@
             padding: 0;
             opacity: 0.6;
             list-style: none;
-            line-height: 2rem;
             
             li {
+                margin: 0.3rem 0;
                 display: flex;
                 align-items: center;
-
+                
                 .featureIcon {
                     font-size: 1.5rem;
                     margin-right: 0.5rem;
                 }
-
+                
                 .feature {
                     font-weight: 400;
-                    font-size: 1.1rem;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
                 }
             }
         }
