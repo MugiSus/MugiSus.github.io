@@ -9,6 +9,12 @@ import creationsYaml from '../data/creations.yaml'
 import articlesYaml from '../data/articles.yaml'
 import careersYaml from '../data/careers.yaml'
 
+const caluclateAge = (birthday) => {
+    const today = new Date();
+    const birthDate = new Date(birthday);
+    return today.getFullYear() - birthDate.getFullYear() - (today.getMonth() < birthDate.getMonth() || today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate());
+}
+
 const Home = () => (
     <div>
         <Head>
@@ -73,10 +79,17 @@ const Home = () => (
                 </div>
 
                 <p className={styles.text}>
-                    国立木更津工業高等専門学校 情報工学科 の 18 歳です。<br />
+                    国立木更津工業高等専門学校 情報工学科 の {caluclateAge("2003/05/05")} 歳です。<br />
                     ハンドルネームは MugiSus で これは むぎすす と発音します。麦煤 と書くこともあります。<br />
                     正規表現は<code>/MugiSus|むぎ(すす)?|麦煤?/gi</code>です。<br />
                 </p>
+
+                <div className={styles.oyagiIconContainer}>
+                    <div className={styles.oyagiIconBorder}>
+                        <img src="/oyagi-icon.png" alt="MugiSus" height="192" width="192" className={styles.oyagiIcon} />
+                    </div>
+                </div>
+
                 <p className={styles.text}>
                     言語は主に JavaScript (HTML+CSS, Next.js) C# (Unity) がつかえます。 <br />
                     フロントエンドがすきで、Web制作を始めゲーム制作にも注力しています。<br />
@@ -89,12 +102,6 @@ const Home = () => (
                 <p className={styles.text}>
                     デザインとお絵描きがそれぞれ少しずつできます。
                 </p>
-
-                <div className={styles.oyagiIconContainer}>
-                    <div className={styles.oyagiIconBorder}>
-                        <img src="/oyagi-icon.png" alt="MugiSus" height="192" width="192" className={styles.oyagiIcon} />
-                    </div>
-                </div>
             </div>
 
             <div className={styles.sections} id="careers">
