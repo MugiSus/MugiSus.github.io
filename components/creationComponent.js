@@ -38,11 +38,13 @@ const CreationComponent = ({ url, image, title, date, description, features }) =
                             ))
                         }
                     </ul>
-                    <p className={styles.description}>{
-                        description.split("\n").filter(line => line).map((line, index) => (
-                            <span key={index}>{line}<br /></span>
-                        ))
-                    }</p>
+                    <p className={styles.description}>
+                        {
+                            description.split("\n").filter(line => line).map((line, index) => (
+                                <span key={index}>{line}<br /></span>
+                            ))
+                        }
+                    </p>
                 </div>
             </a>
         </Link>
