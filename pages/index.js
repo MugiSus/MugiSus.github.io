@@ -26,7 +26,7 @@ const Home = () => (
 
                 <ul className={styles.creationUl}>
                     {
-                        creationsYaml.sort((a, b) => b.date.getTime() - a.date.getTime()).map((creation, index) => (
+                        creationsYaml.filter(creation => creation.pickup).sort((a, b) => b.date.getTime() - a.date.getTime()).map((creation, index) => (
                             <article key={index}>
                                 <CreationComponent {...creation} />
                             </article>
