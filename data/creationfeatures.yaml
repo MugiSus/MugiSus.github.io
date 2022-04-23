@@ -14,9 +14,9 @@ work-in-progress:
     icon: build
     description: Work in progress
 
-not-smartphone-compatible:
-    icon: no_cell
-    description: No smartphone compatible
+no-mobile-compatible:
+    icon: mobile_off
+    description: No mobile compatible
 
 awarded:
     icon: emoji_events
@@ -25,3 +25,7 @@ awarded:
 powered-by-webgl:
     icon: auto_awesome
     description: Powered by WebGL
+
+pwa:
+    icon: install_mobile
+    description: Progressive Web App

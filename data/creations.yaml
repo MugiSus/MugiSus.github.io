@@ -26,7 +26,7 @@
         空間が無限のライフゲームです。
         WebGLで実装してあるのでかなり速いです。
         そのうちスマートフォンにも対応すると思います。
-    features: [powered-by-webgl, not-smartphone-compatible]
+    features: [powered-by-webgl, no-mobile-compatible]
     pickup: true
 -
     url: https://telport.mugisus.com/
@@ -38,7 +38,7 @@
         「TELPort/テルポート：音波による高速通信プロトコル及び、スピーカーとマイクを介した送受信アプリ」
         あらゆるデータを複数の周波数と振幅の合成波に変換し、空間と時間を活用した通信を提供するプロトコルです。
         (説明文より抜粋)
-    features: [awarded, responsive]
+    features: [awarded, pwa]
     pickup: true
 -
     url: https://www.mugisus.com/misc/logicsim_v2/
@@ -50,7 +50,7 @@
         論理回路の計算は比較的高速ですが、canvasで凝ったグラフィックをしてしまったために、大変重いです。
         UIはそのうちできます。できたら教えます。
     pickup: true
-    features: [work-in-progress, not-smartphone-compatible]
+    features: [work-in-progress, no-mobile-compatible]
 -
     url: https://www.mugisus.com/misc/LogicSim/
     image: creations/logicsim.png
