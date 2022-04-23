@@ -1,6 +1,6 @@
 .main {
 	margin: 0 auto;
-	width: 85vw;
+	width: 80vw;
 	max-width: 900px;
 	min-height: 100vh;
 }
@@ -144,7 +144,7 @@
 	}
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
 	.creationUl {
 		grid-template-columns: 1fr;
 	}
