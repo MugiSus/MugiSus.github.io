@@ -4,7 +4,7 @@
 #   title: string
 #   date: Date, date
 #   description: string
-#   icons: [string]
+#   icons: [string] default: [arrow_forward]
 
 -
     url: https://www.mugisus.com/neighbours/
@@ -12,6 +12,7 @@
     title: neighbours
     date: 2022-04-12
     description: 近い粒子と粒子が線で結ばれるよくあるやつです。
+    icons: [smartphone, arrow_forward]
 -
     url: https://www.mugisus.com/lifegameJS/
     image: creations/lifegameJS.png
@@ -24,6 +25,19 @@
     title: TELPort/テルポート
     date: 2021-11-03
     description: 2021年度未踏ジュニアで採択されたプロジェクトです。
+    icons: [smartphone, arrow_forward]
+-
+    url: https://www.mugisus.com/misc/logicsim_v2/
+    image: creations/logicsim-v2.png
+    title: logicsim_v2
+    date: 2021-03-21
+    description: canvasで描画する論理回路シミュレータの第二版です。UIはそのうちできます。
+-
+    url: https://www.mugisus.com/misc/LogicSim/
+    image: creations/logicsim.png
+    title: LogicSim
+    date: 2019-08-01
+    description: canvasで描画する論理回路シミュレータの初版です。
 -
     url: https://www.mugisus.com/misc/morser/
     image: creations/morser.png
@@ -31,20 +45,23 @@
     date: 2019-04-24
     description: D,F,J,Kキーでモールス信号を打ち込みます。
 -
+    url: https://www.mugisus.com/misc/wave/
+    image: creations/wave.png
+    title: wave
+    date: 2018-11-19
+    description: Web開発最初期の作品です。クリックして波ができるだけです。
+    icons: [smartphone, arrow_forward]
+-
     url: https://scratch.mit.edu/projects/136146086/
     image: https://cdn.scratch.mit.edu/get_image/project/136146086_480x360.png
     title: "[3D] Arrow & Ball with editor!"
     date: 2017-05-20
     description: 2017年にScratchで作成したパズルゲームの最終版です。ステージ作成機能とクラウド共有機能があります。
-# -
-#     url: https://scratch.mit.edu/projects/119005799/
-#     image: https://cdn.scratch.mit.edu/get_image/project/119005799_480x360.png
-#     title: Logic-Simulator [100%pen]
-#     date: 2016-10-11
-#     description: Scratchで作成した、タートルグラフィックスで描画される論理回路シミュレータです。
+    icons: [videogame_asset]
 -
     url: https://scratch.mit.edu/projects/45872854/
     image: https://cdn2.scratch.mit.edu/get_image/project/45872854_480x360.png
     title: arrow & ball with editor!
     date: 2015-02-09
     description: 2015年(小学5年)にScratchで作成したパズルゲームの初版です。ステージ作成機能とクラウド共有機能があります。
+    icons: [videogame_asset]

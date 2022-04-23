@@ -19,10 +19,10 @@
         display: flex;
         margin: 0;
         padding: 0;
-        height: 4.4rem;
+        min-height: 4.5rem;
         justify-content: space-between;
         align-items: center;
-        padding: 0.8rem 1rem;
+        padding: 0.6rem 1rem;
 
         .props {
             time {
@@ -42,7 +42,7 @@
         }
 
         .icons {
-            letter-spacing: 0.1rem;
+            letter-spacing: 0.4rem;
             color: var(--color-content);
             opacity: 0.4;
         }

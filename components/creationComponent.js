@@ -13,7 +13,7 @@ const CreationComponent = ({ url, image, title, date, description, icons }) => (
                         <span>{title}</span>
                     </div>
                     <span className={`material-icons-outlined ${styles.icons}`}>
-                        {[...(icons ?? []), 'arrow_forward'].join("")}
+                        {icons?.join("") ?? "arrow_forward"}
                     </span>
                 </div>
             </a>
