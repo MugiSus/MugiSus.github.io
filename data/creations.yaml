@@ -12,7 +12,9 @@
     image: creations/neighbours.png
     title: neighbours
     date: 2022-04-12
-    description: 近い粒子と粒子が線で結ばれるよくあるやつです。
+    description: |
+        近い粒子と粒子が線で結ばれるよくある分子モデルみたいなやつです。
+        シミュレーションのパラメータを変更できるUIが実装されています。
     features: [responsive]
     pickup: true
 -
@@ -20,7 +22,10 @@
     image: creations/lifegameJS.png
     title: lifegameJS
     date: 2021-12-24
-    description: ライフゲームです。WebGLで実装してるのでかなり速いです。
+    description: |
+        空間が無限のライフゲームです。
+        WebGLで実装してあるのでかなり速いです。
+        そのうちスマートフォンにも対応すると思います。
     features: [not-smartphone-compatible]
     pickup: true
 -
@@ -28,7 +33,11 @@
     image: creations/telport.png
     title: TELPort/テルポート
     date: 2021-11-03
-    description: 2021年度未踏ジュニアで採択されたプロジェクトです。
+    description: |
+        2021年度未踏ジュニアで採択されたプロジェクトです。
+        「TELPort/テルポート：音波による高速通信プロトコル及び、スピーカーとマイクを介した送受信アプリ」
+        あらゆるデータを複数の周波数と振幅の合成波に変換し、空間と時間を活用した通信を提供するプロトコルです。
+        (説明文より抜粋)
     features: [awarded, responsive]
     pickup: true
 -
@@ -36,7 +45,10 @@
     image: creations/logicsim-v2.png
     title: logicsim_v2
     date: 2021-03-21
-    description: canvasで描画する論理回路シミュレータの第二版です。UIはそのうちできます。
+    description: |
+        canvasで描画する論理回路シミュレータの第二版です。
+        論理回路の計算は比較的高速ですが、canvasで凝ったグラフィックをしてしまったために、大変重いです。
+        UIはそのうちできます。できたら教えます。
     pickup: true
     features: [work-in-progress, not-smartphone-compatible]
 -
@@ -63,7 +75,10 @@
     image: https://cdn.scratch.mit.edu/get_image/project/136146086_480x360.png
     title: "[3D] Arrow & Ball with editor!"
     date: 2017-05-20
-    description: 2017年にScratchで作成したパズルゲームの最終版です。ステージ作成機能とクラウド共有機能があります。
+    description: |
+        2017年にScratchで作成したパズルゲームの最終版です。
+        ステージ作成機能とクラウド共有機能があります。
+        (2020年のプラットフォーム仕様変更により、クラウド共有機能は事実上の廃止状態ですが、テキストでの出力が可能です。)
     features: [made-with-scratch]
     pickup: true
 -
@@ -71,6 +86,9 @@
     image: https://cdn2.scratch.mit.edu/get_image/project/45872854_480x360.png
     title: arrow & ball with editor!
     date: 2015-02-09
-    description: 2015年(小学5年)にScratchで作成したパズルゲームの初版です。ステージ作成機能とクラウド共有機能があります。
-    features: [made-with-scratch]
+    description: |
+        2015年(小学5年)にScratchで作成したパズルゲームの初版です。
+        ステージ作成機能とクラウド共有機能があります。
+        (2020年のプラットフォーム仕様変更により、クラウド共有機能は事実上の廃止状態です。)
+    features: [awarded, made-with-scratch]
     pickup: true
