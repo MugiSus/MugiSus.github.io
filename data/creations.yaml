@@ -78,7 +78,7 @@
     title: "[3D] Arrow & Ball with editor!"
     date: 2017-05-20
     description: |
-        2017年にScratchで作成したパズルゲームの最終版です。
+        2017年にScratchで作成したパズルゲームの第三版です。
         ステージ作成機能とクラウド共有機能* があります。
         (* 2020年のプラットフォーム仕様変更により、クラウド共有機能は事実上の廃止状態です。テキストでの出力・共有が可能です。)
     features: [made-with-scratch]
