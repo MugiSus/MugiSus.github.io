@@ -14,16 +14,14 @@ const CreationComponent = ({ url, image, title, date, description, features }) =
                         <time>{dateformat(date, 'yyyy.MM.dd')}</time><br />
                         <span>{title}</span>
                     </div>
-                    <div>
-                        {
-                            features.map(feature => (
-                                <span key={feature} className={`material-icons-outlined ${styles.propIcon}`}>{creationfeaturesYaml[feature]?.icon ?? ""}</span>
-                            ))
-                        }
-                        <span className={`material-icons-outlined ${styles.propIcon}`}>
-                            arrow_forward
-                        </span>
-                    </div>
+                    {
+                        features.map(feature => (
+                            <span key={feature} className={`material-icons-outlined ${styles.propIcon}`}>{creationfeaturesYaml[feature]?.icon ?? ""}</span>
+                        ))
+                    }
+                    <span className={`material-icons-outlined ${styles.propIcon}`}>
+                        arrow_forward
+                    </span>
                 </div>
                 <div className={styles.descriptionContainer}>
                     <div className={styles.props}>
