@@ -19,6 +19,7 @@
         display: flex;
         margin: 0;
         padding: 0;
+        height: 4.4rem;
         justify-content: space-between;
         align-items: center;
         padding: 0.8rem 1rem;
@@ -29,17 +30,19 @@
                 font-variant: tabular-nums;
                 font-size: 0.8rem;
                 font-weight: 700;
-                opacity: 0.4;
+                opacity: 0.6;
             }
             
             span {
                 font-weight: 500;
                 letter-spacing: 0.04rem;
                 font-size: 1.2rem;
+                text-overflow: ellipsis;
             }
         }
 
-        .articleIcon {
+        .icons {
+            letter-spacing: 0.1rem;
             color: var(--color-content);
             opacity: 0.4;
         }

@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Link from 'next/link'
-// import Image from 'next/image'
 import { format as dateformat } from 'date-fns'
 import styles from '../styles/Home.module.scss'
 
@@ -77,7 +76,7 @@ const Home = () => (
                     国立木更津工業高等専門学校 情報工学科 の 18 歳です。<br />
                     ハンドルネームは MugiSus で これは むぎすす と発音します。<br />
                     漢字だと 麦煤 と書くことがあります。<br />
-                    正規表現は<code className={styles.code}>/MugiSus|むぎ(すす)?|麦煤?/gi</code>です。<br />
+                    正規表現は<code>/MugiSus|むぎ(すす)?|麦煤?/gi</code>です。<br />
                 </p>
                 <p className={styles.text}>
                     言語は主に JavaScript (HTML+CSS, Next.js) C# (Unity) がつかえます。 <br />
@@ -89,7 +88,7 @@ const Home = () => (
                     同年未踏ジュニアスーパークリエータ認定を受けています。
                 </p>
                 <p className={styles.text}>
-                    イイ感じのデザインとお絵描きがそれぞれ少しずつできます。
+                    デザインとお絵描きがそれぞれ少しずつできます。
                 </p>
 
                 <div className={styles.oyagiIconContainer}>
