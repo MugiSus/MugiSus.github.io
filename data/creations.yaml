@@ -56,20 +56,22 @@
     image: creations/logicsim.png
     title: LogicSim
     date: 2019-08-01
-    description: canvasで描画する論理回路シミュレータの初版です。
+    description: |
+        canvasで描画する論理回路シミュレータの初版です。
 -
     url: https://www.mugisus.com/misc/morser/
     image: creations/morser.png
     title: morser
     date: 2019-04-24
-    description: D,F,J,Kキーでモールス信号を打ち込みます。
+    description: |
+        D,F,J,Kキーでモールス信号を打ち込みます。
 -
     url: https://www.mugisus.com/misc/wave/
     image: creations/wave.png
     title: wave
     date: 2018-11-19
-    description: Web開発最初期の作品です。クリックして波ができるだけです。
-    icons: [smartphone, arrow_forward]
+    description: |
+        Web開発最初期の作品です。クリックして波ができるだけです。
 -
     url: https://scratch.mit.edu/projects/136146086/
     image: https://cdn.scratch.mit.edu/get_image/project/136146086_480x360.png
