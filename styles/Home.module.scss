@@ -71,54 +71,46 @@
 	}
 }
 
-.creationsFeatureSelectorsContainer {
+.creationsFeatureFiltersContainer {
 	overflow-y: scroll;
-	max-height: 18rem;
-
-	.creationsFeatureSelectorWrapper {
-		display: inline-block;
+	max-height: 11rem;
+	
+	.creationsFeatureFilter {
+		margin: 0.4rem 0.3rem;
+		padding: 0.5rem 1rem 0.5rem 0.75rem;
+		border-radius: 50rem;
+		display: inline-flex;
+		align-items: center;
+		background-color: var(--color-blank);
+		border: 1px solid var(--color-border);
+		transition: filter 0.1s ease, color 0.2s ease, background-color 0.2s ease;
+		cursor: pointer;
 		
-		.creationsFeatureSelector {
-			margin: 0.4rem 0.3rem;
-			padding: 0.5rem 1rem 0.5rem 0.75rem;
-			border-radius: 50rem;
-			display: flex;
-			align-items: center;
-			background-color: var(--color-blank);
-			border: 1px solid #C0C0C0;
-			transition: filter 0.1s ease;
-			cursor: pointer;
-	
-			.creationsFeatureSelectorIcon {
-				font-size: 1.2rem;
-				margin-right: 0.5rem;
-			}
-	
-			.creationsFeatureSelectorDescription {
-				font-size: 1rem;
-			}
-	
-			&:hover {
-				filter: brightness(0.97);
-			}
-			
-			&:active {
-				filter: brightness(0.94);
-			}
-		}
-
 		input {
 			display: none;
 		}
-
-		&:nth-child(odd) > input:checked ~ .creationsFeatureSelector {
-			background-color: var(--color-pale-purple);
-			color: var(--color-dark-purple);
+		
+		.creationsFeatureFilterIcon {
+			font-size: 1.2rem;
+			margin-right: 0.5rem;
+		}
+		
+		.creationsFeatureFilterDescription {
+			font-size: 1rem;
+		}
+		
+		&.selected {
+			border: 1px solid var(--color-selected);
+			background-color: var(--color-selected);
+			color: var(--color-blank);
 		}
 
-		&:nth-child(even) > input:checked ~ .creationsFeatureSelector {
-			background-color: var(--color-pale-green);
-			color: var(--color-dark-green);
+		&:hover {
+			filter: brightness(0.97);
+		}
+		
+		&:active {
+			filter: brightness(0.94);
 		}
 	}
 }
@@ -130,6 +122,14 @@
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 2rem;
 	gap: 2rem;
+
+	.creationComponents {
+		display: none;
+
+		&.filtered {
+			display: block;
+		}
+	}
 }
 
 .articlesUl {

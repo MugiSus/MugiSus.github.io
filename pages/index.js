@@ -10,10 +10,22 @@ import articlesYaml from '../data/articles.yaml'
 import careersYaml from '../data/careers.yaml'
 import creationfeaturesYaml from '../data/creationfeatures.yaml'
 
-let creationFeatureFilter = [
-    "pickup",
-    // "responsive",
-]
+let creationFeatureFilter = ["pickup"];
+
+const creationFeatureFilterChange = (event) => {
+    event.currentTarget.parentElement.classList.toggle(styles.selected, event.currentTarget.checked);
+    if (event.currentTarget.checked) 
+        creationFeatureFilter.push(event.currentTarget.value);
+    else
+        creationFeatureFilter = creationFeatureFilter.filter(feature => feature !== event.currentTarget.value);
+    
+    document.querySelectorAll(`.${styles.creationComponents}`).forEach(creationComponent => 
+        creationComponent.classList.toggle(
+            styles.filtered,
+            creationFeatureFilter.length === 0 || creationFeatureFilter.every(feature => creationComponent.dataset.features.split(",").includes(feature))
+        )
+    )
+}
 
 const caluclateAge = (birthday) => {
     const today = new Date();
@@ -36,24 +48,22 @@ const Home = () => (
                     <h2 className={styles.subtitle}>Artworks & Products</h2>
                 </div>
                 
-                <div className={styles.creationsFeatureSelectorsContainer}>
+                <div className={styles.creationsFeatureFiltersContainer}>
                     {
                         Object.keys(creationfeaturesYaml).map(feature => (
-                            <div key={feature} className={styles.creationsFeatureSelectorWrapper}>
-                                <input type="checkbox" className={`creation`} id={`creation-feature-${feature}`} defaultChecked={creationFeatureFilter.includes(feature)} />
-                                <label className={`${styles.creationsFeatureSelector}`} htmlFor={`creation-feature-${feature}`}>
-                                    <span className={`material-icons-outlined ${styles.creationsFeatureSelectorIcon}`}>{creationfeaturesYaml[feature].icon}</span>
-                                    <span className={styles.creationsFeatureSelectorDescription}>{creationfeaturesYaml[feature].description}</span>
-                                </label>
-                            </div>
+                            <label key={feature} className={`${styles.creationsFeatureFilter} ${creationFeatureFilter.includes(feature) ? styles.selected : ""}`}>
+                                <input type="checkbox" className={`creation`} defaultChecked={creationFeatureFilter.includes(feature)} value={feature} onChange={creationFeatureFilterChange} />
+                                <span className={`material-icons-outlined ${styles.creationsFeatureFilterIcon}`}>{creationfeaturesYaml[feature].icon}</span>
+                                <span className={styles.creationsFeatureFilterDescription}>{creationfeaturesYaml[feature].description}</span>
+                            </label>
                         ))
                     }
                 </div>
                 
                 <ul className={styles.creationUl}>
                     {
-                        creationsYaml.filter(creation => creationFeatureFilter.some(feature => creation.features.includes(feature))).sort((a, b) => b.date.getTime() - a.date.getTime()).map((creation, index) => (
-                            <article key={index}>   
+                        creationsYaml.sort((a, b) => b.date.getTime() - a.date.getTime()).map((creation, index) => (
+                            <article key={index} className={`${styles.creationComponents} ${creationFeatureFilter.length === 0 || creationFeatureFilter.every(feature => creation.features.includes(feature)) ? styles.filtered : ""}`} data-features={creation.features}>
                                 <CreationComponent {...creation} />
                             </article>
                         ))
