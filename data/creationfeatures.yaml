@@ -6,7 +6,7 @@
 pickup:
     icon: push_pin
     description: Pickup
-    default: true
+    filter-default: true
 
 responsive:
     icon: smartphone

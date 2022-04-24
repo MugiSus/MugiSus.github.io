@@ -10,15 +10,16 @@ import articlesYaml from '../data/articles.yaml'
 import careersYaml from '../data/careers.yaml'
 import creationfeaturesYaml from '../data/creationfeatures.yaml'
 
-let creationFeatureFilter = Object.keys(creationfeaturesYaml).filter(feature => creationfeaturesYaml[feature].default);
+let creationFeatureFilter = Object.keys(creationfeaturesYaml).filter(feature => creationfeaturesYaml[feature]["filter-default"]);
 
 const doesFilterIncludes = (array, filter) => {
     if (filter.length === 0) return true;
     return filter.every(feature => array.includes(feature));
-};
+}
 
 const creationFeatureFilterChange = (event) => {
     event.currentTarget.parentElement.classList.toggle(styles.selected, event.currentTarget.checked);
+    
     if (event.currentTarget.checked) 
         creationFeatureFilter.push(event.currentTarget.value);
     else
