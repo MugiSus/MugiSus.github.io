@@ -28,4 +28,4 @@ powered-by-webgl:
 
 pwa:
     icon: install_mobile
-    description: Responsive / Progressive Web App
+    description: Responsive / Progressive Web App # note Progressive<&nbsp;>Web<&nbsp;>App
