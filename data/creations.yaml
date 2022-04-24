@@ -25,7 +25,7 @@
         空間が無限のライフゲームです。
         WebGLで実装してあるのでかなり速いです。
         そのうちスマートフォンにも対応すると思います。
-    features: [pickup, powered-by-webgl, no-mobile-compatible]
+    features: [pickup, powered-by-webgl]
 -
     url: https://telport.mugisus.com/
     image: creations/telport.png
@@ -46,15 +46,15 @@
         canvasで描画する論理回路シミュレータの第二版です。
         論理回路の計算は比較的高速ですが、canvasで凝ったグラフィックをしてしまったために、大変重いです。
         UIはそのうちできます。できたら教えます。
-    features: [pickup, work-in-progress, no-mobile-compatible]
+    features: [pickup, work-in-progress]
 -
-    url: https://www.mugisus.com/misc/LogicSim/
+    url: https://www.mugisus.com/misc/LogicSim/?theme=dark
     image: creations/logicsim.png
     title: LogicSim
     date: 2019-08-01
     description: |
         canvasで描画する論理回路シミュレータの初版です。
-    features: [no-mobile-compatible]
+    features: []
 -
     url: https://www.mugisus.com/misc/morser/
     image: creations/morser.png
@@ -62,7 +62,7 @@
     date: 2019-04-24
     description: |
         D,F,J,Kキーでモールス信号を打ち込みます。
-    features: [no-mobile-compatible]
+    features: []
 -
     url: https://www.mugisus.com/misc/wave/
     image: creations/wave.png

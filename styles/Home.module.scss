@@ -73,11 +73,11 @@
 
 .creationsFeatureSelectorsContainer {
 	overflow-y: scroll;
-	max-height: 12rem;
+	max-height: 18rem;
 
 	.creationsFeatureSelectorWrapper {
 		display: inline-block;
-
+		
 		.creationsFeatureSelector {
 			margin: 0.4rem 0.3rem;
 			padding: 0.5rem 1rem 0.5rem 0.75rem;
@@ -87,6 +87,7 @@
 			background-color: var(--color-blank);
 			border: 1px solid #C0C0C0;
 			transition: filter 0.1s ease;
+			cursor: pointer;
 	
 			.creationsFeatureSelectorIcon {
 				font-size: 1.2rem;
@@ -98,11 +99,11 @@
 			}
 	
 			&:hover {
-				filter: brightness(0.95);
+				filter: brightness(0.97);
 			}
 			
 			&:active {
-				filter: brightness(0.9);
+				filter: brightness(0.94);
 			}
 		}
 

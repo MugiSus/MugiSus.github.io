@@ -40,16 +40,7 @@ const Home = () => (
                     {
                         Object.keys(creationfeaturesYaml).map(feature => (
                             <div key={feature} className={styles.creationsFeatureSelectorWrapper}>
-                                <input type="checkbox" className={`creation`} id={`creation-feature-${feature}`} defaultChecked={creationfeaturesYaml[feature].default} onChange={
-                                    (event) => {
-                                        if (event.target.checked) {
-                                            creationFeatureFilter.push(feature)
-                                        } else {
-                                            creationFeatureFilter.splice(creationFeatureFilter.indexOf(feature), 1)
-                                        }
-                                        console.log(creationFeatureFilter)
-                                    }
-                                }/>
+                                <input type="checkbox" className={`creation`} id={`creation-feature-${feature}`} defaultChecked={creationFeatureFilter.includes(feature)} />
                                 <label className={`${styles.creationsFeatureSelector}`} htmlFor={`creation-feature-${feature}`}>
                                     <span className={`material-icons-outlined ${styles.creationsFeatureSelectorIcon}`}>{creationfeaturesYaml[feature].icon}</span>
                                     <span className={styles.creationsFeatureSelectorDescription}>{creationfeaturesYaml[feature].description}</span>

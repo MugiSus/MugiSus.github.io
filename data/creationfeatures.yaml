@@ -1,11 +1,10 @@
 # <fearure id>:
-#   icon: string, google material icons
+#   icon: string, Google Material Icons
 #   description: string
 
 pickup:
     icon: push_pin
     description: Pickup
-    default: true
 
 responsive:
     icon: smartphone
@@ -15,9 +14,9 @@ pwa:
     icon: install_mobile
     description: Progressive Web App
 
-no-mobile-compatible:
-    icon: mobile_off
-    description: No mobile compatible
+# no-mobile-compatible:
+#     icon: mobile_off
+#     description: No mobile compatible
 
 work-in-progress:
     icon: build
