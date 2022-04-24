@@ -77,17 +77,27 @@
     title: "[3D] Arrow & Ball with editor!"
     date: 2017-05-20
     description: |
-        2017年にScratchで作成したパズルゲームの第三版です。
+        2017年にScratchで制作したパズルゲームの第三版です。
         ステージ作成機能とクラウド共有機能* があります。
-        (* 2020年のプラットフォーム仕様変更により、クラウド共有機能は事実上の廃止状態です。テキストでの出力・共有が可能です。)
+        (* 2020年のプラットフォーム仕様変更により、クラウド共有機能は事実上の廃止状態ですが、テキストでの出力・共有が可能です。)
     features: [pickup, made-with-scratch]
+-
+    url: https://scratch.mit.edu/projects/119005799/
+    image: https://cdn.scratch.mit.edu/get_image/project/119005799_480x360.png
+    title: "Logic-Simulator [100%pen]"
+    date: 2016-10-11
+    description: |
+        2016年にScratchで制作した、タートルグラフィックスのみで描画される論理回路シミュレータです。
+        クラウド共有機能* があります。
+        (* 2020年のプラットフォーム仕様変更により、クラウド共有機能は事実上の廃止状態ですが、テキストでの出力・共有が可能です。)
+    features: [made-with-scratch]
 -
     url: https://scratch.mit.edu/projects/45872854/
     image: https://cdn2.scratch.mit.edu/get_image/project/45872854_480x360.png
     title: arrow & ball with editor!
     date: 2015-02-09
     description: |
-        2015年(小学5年)にScratchで作成したパズルゲームの初版です。
+        2015年(小学5年)にScratchで制作したパズルゲームの初版です。
         ステージ作成機能とクラウド共有機能* があります。
         (* 2020年のプラットフォーム仕様変更により、クラウド共有機能は事実上の廃止状態です。)
     features: [pickup, awarded, made-with-scratch]

@@ -126,7 +126,7 @@
 	.creationComponents {
 		display: none;
 
-		&.filtered {
+		&.visible {
 			display: block;
 		}
 	}

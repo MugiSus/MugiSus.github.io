@@ -10,7 +10,12 @@ import articlesYaml from '../data/articles.yaml'
 import careersYaml from '../data/careers.yaml'
 import creationfeaturesYaml from '../data/creationfeatures.yaml'
 
-let creationFeatureFilter = ["pickup"];
+let creationFeatureFilter = Object.keys(creationfeaturesYaml).filter(feature => creationfeaturesYaml[feature].default);
+
+const doesFilterIncludes = (array, filter) => {
+    if (filter.length === 0) return true;
+    return filter.every(feature => array.includes(feature));
+};
 
 const creationFeatureFilterChange = (event) => {
     event.currentTarget.parentElement.classList.toggle(styles.selected, event.currentTarget.checked);
@@ -21,8 +26,8 @@ const creationFeatureFilterChange = (event) => {
     
     document.querySelectorAll(`.${styles.creationComponents}`).forEach(creationComponent => 
         creationComponent.classList.toggle(
-            styles.filtered,
-            creationFeatureFilter.length === 0 || creationFeatureFilter.every(feature => creationComponent.dataset.features.split(",").includes(feature))
+            styles.visible,
+            doesFilterIncludes(creationComponent.dataset.features.split(","), creationFeatureFilter)
         )
     )
 }
@@ -63,7 +68,7 @@ const Home = () => (
                 <ul className={styles.creationUl}>
                     {
                         creationsYaml.sort((a, b) => b.date.getTime() - a.date.getTime()).map((creation, index) => (
-                            <article key={index} className={`${styles.creationComponents} ${creationFeatureFilter.length === 0 || creationFeatureFilter.every(feature => creation.features.includes(feature)) ? styles.filtered : ""}`} data-features={creation.features}>
+                            <article key={index} className={`${styles.creationComponents} ${doesFilterIncludes(creation.features, creationFeatureFilter) ? styles.visible : ""}`} data-features={creation.features}>
                                 <CreationComponent {...creation} />
                             </article>
                         ))

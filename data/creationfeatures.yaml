@@ -1,10 +1,12 @@
 # <fearure id>:
 #   icon: string, Google Material Icons
 #   description: string
+#   default: boolean
 
 pickup:
     icon: push_pin
     description: Pickup
+    default: true
 
 responsive:
     icon: smartphone
