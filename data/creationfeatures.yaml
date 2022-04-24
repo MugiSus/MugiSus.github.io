@@ -2,9 +2,9 @@
 #   icon: string, google material icons
 #   description: string
 
-made-with-scratch:
-    icon: videogame_asset
-    description: Made with Scratch
+pickup:
+    icon: push_pin
+    description: Pickup
 
 responsive:
     icon: smartphone
@@ -26,6 +26,10 @@ powered-by-webgl:
     icon: auto_awesome
     description: Powered by WebGL
 
+made-with-scratch:
+    icon: videogame_asset
+    description: Made with Scratch
+
 pwa:
     icon: install_mobile
-    description: Responsive / Progressive Web App # note Progressive&nbsp;Web&nbsp;App
+    description: Progressive Web App

@@ -9,6 +9,11 @@ import creationsYaml from '../data/creations.yaml'
 import articlesYaml from '../data/articles.yaml'
 import careersYaml from '../data/careers.yaml'
 
+let creationFeatureFilter = [
+    "pickup",
+    // "responsive",
+]
+
 const caluclateAge = (birthday) => {
     const today = new Date();
     const birthDate = new Date(birthday);
@@ -32,8 +37,8 @@ const Home = () => (
 
                 <ul className={styles.creationUl}>
                     {
-                        creationsYaml.filter(creation => creation.pickup).sort((a, b) => b.date.getTime() - a.date.getTime()).map((creation, index) => (
-                            <article key={index}>
+                        creationsYaml.filter(creation => creationFeatureFilter.some(feature => creation.features.includes(feature))).sort((a, b) => b.date.getTime() - a.date.getTime()).map((creation, index) => (
+                            <article key={index}>   
                                 <CreationComponent {...creation} />
                             </article>
                         ))

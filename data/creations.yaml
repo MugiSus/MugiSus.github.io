@@ -15,8 +15,7 @@
     description: |
         近い粒子と粒子が線で結ばれるよくあるネットワークモデルみたいなやつに、粒子同士が反発したり引き寄せたりするよくある分子モデルみたいなやつを組み合わせたものです。
         反発力や引力の係数や粒子の臨界距離の他、さまざまなパラメータを変更できるUIが実装されています。
-    features: [responsive]
-    pickup: true
+    features: [pickup, responsive]
 -
     url: https://www.mugisus.com/lifegameJS/
     image: creations/lifegameJS.png
@@ -26,8 +25,7 @@
         空間が無限のライフゲームです。
         WebGLで実装してあるのでかなり速いです。
         そのうちスマートフォンにも対応すると思います。
-    features: [powered-by-webgl, no-mobile-compatible]
-    pickup: true
+    features: [pickup, powered-by-webgl, no-mobile-compatible]
 -
     url: https://telport.mugisus.com/
     image: creations/telport.png
@@ -38,8 +36,7 @@
         「TELPort/テルポート：音波による高速通信プロトコル及び、スピーカーとマイクを介した送受信アプリ」
         あらゆるデータを複数の周波数と振幅の合成波に変換し、空間と時間を活用した通信を提供するプロトコルです。
         (説明文より抜粋)
-    features: [awarded, pwa]
-    pickup: true
+    features: [pickup, awarded, pwa, responsive]
 -
     url: https://www.mugisus.com/misc/logicsim_v2/
     image: creations/logicsim-v2.png
@@ -49,8 +46,7 @@
         canvasで描画する論理回路シミュレータの第二版です。
         論理回路の計算は比較的高速ですが、canvasで凝ったグラフィックをしてしまったために、大変重いです。
         UIはそのうちできます。できたら教えます。
-    pickup: true
-    features: [work-in-progress, no-mobile-compatible]
+    features: [pickup, work-in-progress, no-mobile-compatible]
 -
     url: https://www.mugisus.com/misc/LogicSim/
     image: creations/logicsim.png
@@ -58,6 +54,7 @@
     date: 2019-08-01
     description: |
         canvasで描画する論理回路シミュレータの初版です。
+    features: [no-mobile-compatible]
 -
     url: https://www.mugisus.com/misc/morser/
     image: creations/morser.png
@@ -65,6 +62,7 @@
     date: 2019-04-24
     description: |
         D,F,J,Kキーでモールス信号を打ち込みます。
+    features: [no-mobile-compatible]
 -
     url: https://www.mugisus.com/misc/wave/
     image: creations/wave.png
@@ -72,6 +70,7 @@
     date: 2018-11-19
     description: |
         Web開発最初期の作品です。クリックして波ができるだけです。
+    features: [responsive]
 -
     url: https://scratch.mit.edu/projects/136146086/
     image: https://cdn.scratch.mit.edu/get_image/project/136146086_480x360.png
@@ -81,8 +80,7 @@
         2017年にScratchで作成したパズルゲームの第三版です。
         ステージ作成機能とクラウド共有機能* があります。
         (* 2020年のプラットフォーム仕様変更により、クラウド共有機能は事実上の廃止状態です。テキストでの出力・共有が可能です。)
-    features: [made-with-scratch]
-    pickup: true
+    features: [pickup, made-with-scratch]
 -
     url: https://scratch.mit.edu/projects/45872854/
     image: https://cdn2.scratch.mit.edu/get_image/project/45872854_480x360.png
@@ -92,5 +90,4 @@
         2015年(小学5年)にScratchで作成したパズルゲームの初版です。
         ステージ作成機能とクラウド共有機能* があります。
         (* 2020年のプラットフォーム仕様変更により、クラウド共有機能は事実上の廃止状態です。)
-    features: [awarded, made-with-scratch]
-    pickup: true
+    features: [pickup, awarded, made-with-scratch]
