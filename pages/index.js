@@ -19,7 +19,6 @@ const doesFilterIncludes = (array, filter) => {
 
 const creationFeatureFilterChange = (event) => {
     event.currentTarget.parentElement.classList.toggle(styles.selected, event.currentTarget.checked);
-    
     if (event.currentTarget.checked) 
         creationFeatureFilter.push(event.currentTarget.value);
     else
