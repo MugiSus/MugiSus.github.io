@@ -71,8 +71,59 @@
 	}
 }
 
+.creationsFeatureSelectorsContainer {
+	overflow-y: scroll;
+	max-height: 12rem;
+
+	.creationsFeatureSelectorWrapper {
+		display: inline-block;
+
+		.creationsFeatureSelector {
+			margin: 0.4rem 0.3rem;
+			padding: 0.5rem 1rem 0.5rem 0.75rem;
+			border-radius: 50rem;
+			display: flex;
+			align-items: center;
+			background-color: var(--color-blank);
+			border: 1px solid #C0C0C0;
+			transition: filter 0.1s ease;
+	
+			.creationsFeatureSelectorIcon {
+				font-size: 1.2rem;
+				margin-right: 0.5rem;
+			}
+	
+			.creationsFeatureSelectorDescription {
+				font-size: 1rem;
+			}
+	
+			&:hover {
+				filter: brightness(0.95);
+			}
+			
+			&:active {
+				filter: brightness(0.9);
+			}
+		}
+
+		input {
+			display: none;
+		}
+
+		&:nth-child(odd) > input:checked ~ .creationsFeatureSelector {
+			background-color: var(--color-pale-purple);
+			color: var(--color-dark-purple);
+		}
+
+		&:nth-child(even) > input:checked ~ .creationsFeatureSelector {
+			background-color: var(--color-pale-green);
+			color: var(--color-dark-green);
+		}
+	}
+}
+
 .creationUl {
-	margin: 2.5rem 0;
+	margin: 2rem 0;
     padding: 0;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -115,13 +166,13 @@
 		}
 
 		&:nth-child(even) a {
-			background: #E3DEF2;
-			color: #685F82;
+			background: var(--color-pale-purple);
+			color: var(--color-dark-purple);
 		}
 		
 		&:nth-child(odd) a {
-			background: #E4F3D0;
-			color: #6E8C46;
+			background: var(--color-pale-green);
+			color: var(--color-dark-green);
 		}
 	}
 }

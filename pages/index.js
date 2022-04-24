@@ -8,6 +8,7 @@ import CreationComponent from '../components/creationComponent.js';
 import creationsYaml from '../data/creations.yaml'
 import articlesYaml from '../data/articles.yaml'
 import careersYaml from '../data/careers.yaml'
+import creationfeaturesYaml from '../data/creationfeatures.yaml'
 
 let creationFeatureFilter = [
     "pickup",
@@ -27,14 +28,37 @@ const Home = () => (
             <link rel="icon" href="/favicon.ico" />
             <meta name="description" content="The Portfolio of MugiSus" />
         </Head>
-
+        
         <main className={styles.main}>
             <div className={styles.sections} id="creations">
                 <div className={styles.titleContainer}>
                     <h1 className={styles.title}>MugiSus&apos;s Creations</h1>
                     <h2 className={styles.subtitle}>Artworks & Products</h2>
                 </div>
-
+                
+                <div className={styles.creationsFeatureSelectorsContainer}>
+                    {
+                        Object.keys(creationfeaturesYaml).map(feature => (
+                            <div key={feature} className={styles.creationsFeatureSelectorWrapper}>
+                                <input type="checkbox" className={`creation`} id={`creation-feature-${feature}`} defaultChecked={creationfeaturesYaml[feature].default} onChange={
+                                    (event) => {
+                                        if (event.target.checked) {
+                                            creationFeatureFilter.push(feature)
+                                        } else {
+                                            creationFeatureFilter.splice(creationFeatureFilter.indexOf(feature), 1)
+                                        }
+                                        console.log(creationFeatureFilter)
+                                    }
+                                }/>
+                                <label className={`${styles.creationsFeatureSelector}`} htmlFor={`creation-feature-${feature}`}>
+                                    <span className={`material-icons-outlined ${styles.creationsFeatureSelectorIcon}`}>{creationfeaturesYaml[feature].icon}</span>
+                                    <span className={styles.creationsFeatureSelectorDescription}>{creationfeaturesYaml[feature].description}</span>
+                                </label>
+                            </div>
+                        ))
+                    }
+                </div>
+                
                 <ul className={styles.creationUl}>
                     {
                         creationsYaml.filter(creation => creationFeatureFilter.some(feature => creation.features.includes(feature))).sort((a, b) => b.date.getTime() - a.date.getTime()).map((creation, index) => (

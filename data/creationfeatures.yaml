@@ -5,18 +5,23 @@
 pickup:
     icon: push_pin
     description: Pickup
+    default: true
 
 responsive:
     icon: smartphone
     description: Responsive
 
-work-in-progress:
-    icon: build
-    description: Work in progress
+pwa:
+    icon: install_mobile
+    description: Progressive Web App
 
 no-mobile-compatible:
     icon: mobile_off
     description: No mobile compatible
+
+work-in-progress:
+    icon: build
+    description: Work in progress
 
 awarded:
     icon: emoji_events
@@ -29,7 +34,3 @@ powered-by-webgl:
 made-with-scratch:
     icon: videogame_asset
     description: Made with Scratch
-
-pwa:
-    icon: install_mobile
-    description: Progressive Web App
