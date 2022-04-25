@@ -231,5 +231,9 @@
 @media screen and (max-width: 750px) {
 	.creationUl {
 		grid-template-columns: 1fr;
+
+		.noCreationsMatch {
+			grid-column: 1 / 2;
+		}
 	}
 }
