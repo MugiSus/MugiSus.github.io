@@ -11,27 +11,27 @@ import careersYaml from '../data/careers.yaml'
 import creationfeaturesYaml from '../data/creationfeatures.yaml'
 
 const featureNames = Object.keys(creationfeaturesYaml);
-let creationFeatureFilter = featureNames.filter(feature => creationfeaturesYaml[feature]["filter-default"]);
+const creationFeatureFilterSet = new Set(featureNames.filter(feature => creationfeaturesYaml[feature]["filter-default"]));
 
-const doesFilterIncludes = (array, filter) => filter.length === 0 || filter.every(feature => array.includes(feature));
+const doesFilterIncludes = (array, filter) => filter.size === 0 || [...filter].every(feature => array.includes(feature));
 
 const creationFeatureFilterChange = (event) => {
     event.currentTarget.parentElement.classList.toggle(styles.selected, event.currentTarget.checked);
-    if (event.currentTarget.checked) 
-        creationFeatureFilter.push(event.currentTarget.value);
+    if (event.currentTarget.checked)
+        creationFeatureFilterSet.add(event.currentTarget.value);
     else
-        creationFeatureFilter = creationFeatureFilter.filter(feature => feature !== event.currentTarget.value);
+        creationFeatureFilterSet.delete(event.currentTarget.value);
     
     let matchCount = 0;
     document.querySelectorAll(`.${styles.creationComponents}`).forEach(creationComponent => 
         matchCount += creationComponent.classList.toggle(
             styles.visible,
-            doesFilterIncludes(creationComponent.dataset.features.split(","), creationFeatureFilter)
+            doesFilterIncludes(creationComponent.dataset.features.split(","), creationFeatureFilterSet)
         )
-    )
-    
+    );
+
     document.querySelector(`.${styles.noCreationsMatch}`).classList.toggle(styles.visible, matchCount === 0);
-    console.log(creationFeatureFilter, matchCount);
+    console.log(creationFeatureFilterSet, matchCount);
 }
 
 const caluclateAge = (birthday) => {
@@ -58,8 +58,8 @@ const Home = () => (
                 <div className={styles.creationsFeatureFiltersContainer}>
                     {
                         featureNames.map(feature => (
-                            <label key={feature} className={`${styles.creationsFeatureFilter} ${creationFeatureFilter.includes(feature) ? styles.selected : ""}`}>
-                                <input type="checkbox" className={`creation`} defaultChecked={creationFeatureFilter.includes(feature)} value={feature} onChange={creationFeatureFilterChange} />
+                            <label key={feature} className={`${styles.creationsFeatureFilter} ${creationFeatureFilterSet.has(feature) ? styles.selected : ""}`}>
+                                <input type="checkbox" className={`creation`} defaultChecked={creationFeatureFilterSet.has(feature)} value={feature} onChange={creationFeatureFilterChange} />
                                 <div className={`material-icons-outlined ${styles.creationsFeatureFilterIcon}`}>{creationfeaturesYaml[feature].icon}</div>
                                 <div className={styles.creationsFeatureFilterDescription}>{creationfeaturesYaml[feature].description}</div>
                             </label>
@@ -70,7 +70,7 @@ const Home = () => (
                 <ul className={styles.creationUl}>
                     {
                         creationsYaml.sort((a, b) => b.date.getTime() - a.date.getTime()).map((creation, index) => (
-                            <article key={index} className={`${styles.creationComponents} ${doesFilterIncludes(creation.features, creationFeatureFilter) ? styles.visible : ""}`} data-features={creation.features}>
+                            <article key={index} className={`${styles.creationComponents} ${doesFilterIncludes(creation.features, creationFeatureFilterSet) ? styles.visible : ""}`} data-features={creation.features}>
                                 <CreationComponent {...creation} />
                             </article>
                         ))
