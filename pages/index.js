@@ -62,8 +62,8 @@ const Home = () => (
                         featureNames.map(feature => (
                             <label key={feature} className={`${styles.creationsFeatureFilter} ${creationFeatureFilter.includes(feature) ? styles.selected : ""}`}>
                                 <input type="checkbox" className={`creation`} defaultChecked={creationFeatureFilter.includes(feature)} value={feature} onChange={creationFeatureFilterChange} />
-                                <span className={`material-icons-outlined ${styles.creationsFeatureFilterIcon}`}>{creationfeaturesYaml[feature].icon}</span>
-                                <span className={styles.creationsFeatureFilterDescription}>{creationfeaturesYaml[feature].description}</span>
+                                <div className={`material-icons-outlined ${styles.creationsFeatureFilterIcon}`}>{creationfeaturesYaml[feature].icon}</div>
+                                <div className={styles.creationsFeatureFilterDescription}>{creationfeaturesYaml[feature].description}</div>
                             </label>
                         ))
                     }

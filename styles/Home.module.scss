@@ -137,17 +137,19 @@
 		display: none;
 		align-items: center;
 		justify-content: center;
+		flex-direction: column;
 		opacity: 40%;
 		min-height: 10rem;
 		padding: 0 0.5rem;
 		grid-column: 1 / 3;
 
 		.noCreationsMatchIcon {
-			font-size: 3rem;
+			font-size: 3.5rem;
 			margin-right: 1rem;
 		}
 
 		.noCreationsMatchText {
+			text-align: center;
 			line-height: 2.5rem;
 			font-size: 1.5rem;
 			font-weight: 400;
