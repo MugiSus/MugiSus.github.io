@@ -13,10 +13,7 @@ import creationfeaturesYaml from '../data/creationfeatures.yaml'
 const featureNames = Object.keys(creationfeaturesYaml);
 let creationFeatureFilter = featureNames.filter(feature => creationfeaturesYaml[feature]["filter-default"]);
 
-const doesFilterIncludes = (array, filter) => {
-    if (filter.length === 0) return true;
-    return filter.every(feature => array.includes(feature));
-}
+const doesFilterIncludes = (array, filter) => filter.length === 0 || filter.every(feature => array.includes(feature));
 
 const creationFeatureFilterChange = (event) => {
     event.currentTarget.parentElement.classList.toggle(styles.selected, event.currentTarget.checked);
@@ -34,6 +31,7 @@ const creationFeatureFilterChange = (event) => {
     )
     
     document.querySelector(`.${styles.noCreationsMatch}`).classList.toggle(styles.visible, matchCount === 0);
+    console.log(creationFeatureFilter, matchCount);
 }
 
 const caluclateAge = (birthday) => {
