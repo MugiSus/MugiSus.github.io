@@ -10,7 +10,8 @@ import articlesYaml from '../data/articles.yaml'
 import careersYaml from '../data/careers.yaml'
 import creationfeaturesYaml from '../data/creationfeatures.yaml'
 
-let creationFeatureFilter = Object.keys(creationfeaturesYaml).filter(feature => creationfeaturesYaml[feature]["filter-default"]);
+const featureNames = Object.keys(creationfeaturesYaml);
+let creationFeatureFilter = featureNames.filter(feature => creationfeaturesYaml[feature]["filter-default"]);
 
 const doesFilterIncludes = (array, filter) => {
     if (filter.length === 0) return true;
@@ -24,12 +25,15 @@ const creationFeatureFilterChange = (event) => {
     else
         creationFeatureFilter = creationFeatureFilter.filter(feature => feature !== event.currentTarget.value);
     
+    let matchCount = 0;
     document.querySelectorAll(`.${styles.creationComponents}`).forEach(creationComponent => 
-        creationComponent.classList.toggle(
+        matchCount += creationComponent.classList.toggle(
             styles.visible,
             doesFilterIncludes(creationComponent.dataset.features.split(","), creationFeatureFilter)
         )
     )
+    
+    document.querySelector(`.${styles.noCreationsMatch}`).classList.toggle(styles.visible, matchCount === 0);
 }
 
 const caluclateAge = (birthday) => {
@@ -55,7 +59,7 @@ const Home = () => (
                 
                 <div className={styles.creationsFeatureFiltersContainer}>
                     {
-                        Object.keys(creationfeaturesYaml).map(feature => (
+                        featureNames.map(feature => (
                             <label key={feature} className={`${styles.creationsFeatureFilter} ${creationFeatureFilter.includes(feature) ? styles.selected : ""}`}>
                                 <input type="checkbox" className={`creation`} defaultChecked={creationFeatureFilter.includes(feature)} value={feature} onChange={creationFeatureFilterChange} />
                                 <span className={`material-icons-outlined ${styles.creationsFeatureFilterIcon}`}>{creationfeaturesYaml[feature].icon}</span>
@@ -73,6 +77,10 @@ const Home = () => (
                             </article>
                         ))
                     }
+                    <div className={styles.noCreationsMatch}>
+                        <span className={`material-icons-outlined ${styles.noCreationsMatchIcon}`}>filter_alt_off</span>
+                        <span className={styles.noCreationsMatchText}>No Creations Match Your Filter(!)</span>
+                    </div>
                 </ul>
             </div>
             
