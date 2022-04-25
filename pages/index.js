@@ -78,7 +78,7 @@ const Home = () => (
                         ))
                     }
                     <div className={styles.noCreationsMatch}>
-                        <span className={`material-icons-outlined ${styles.noCreationsMatchIcon}`}>filter_alt_off</span>
+                        <span className={`material-icons-outlined ${styles.noCreationsMatchIcon}`}>filter_alt</span>
                         <span className={styles.noCreationsMatchText}>No Creations Match Your Filter(!)</span>
                     </div>
                 </ul>
