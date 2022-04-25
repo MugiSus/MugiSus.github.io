@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
             <Header />
 			<Component {...pageProps} />
             <Footer />
-            <div className="background" />
+            <div className="background">&nbsp;</div>
 		</div>
 	)
 }
