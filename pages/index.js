@@ -13,7 +13,7 @@ import creationfeaturesYaml from '../data/creationfeatures.yaml'
 const featureNames = Object.keys(creationfeaturesYaml);
 const creationFeatureFilterSet = new Set(featureNames.filter(feature => creationfeaturesYaml[feature]["filter-default"]));
 
-const doesFilterIncludes = (array, filter) => filter.size === 0 || [...filter].every(feature => array.includes(feature));
+const doesFilterHas = (featureSet, filter) => filter.size === 0 || [...filter].every(feature => featureSet.has(feature));
 
 const creationFeatureFilterChange = (event) => {
     event.currentTarget.parentElement.classList.toggle(styles.selected, event.currentTarget.checked);
@@ -26,7 +26,7 @@ const creationFeatureFilterChange = (event) => {
     document.querySelectorAll(`.${styles.creationComponents}`).forEach(creationComponent => 
         matchCount += creationComponent.classList.toggle(
             styles.visible,
-            doesFilterIncludes(creationComponent.dataset.features.split(","), creationFeatureFilterSet)
+            doesFilterHas(new Set(creationComponent.dataset.features.split(",")), creationFeatureFilterSet)
         )
     );
 
@@ -70,7 +70,7 @@ const Home = () => (
                 <ul className={styles.creationUl}>
                     {
                         creationsYaml.sort((a, b) => b.date.getTime() - a.date.getTime()).map((creation, index) => (
-                            <article key={index} className={`${styles.creationComponents} ${doesFilterIncludes(creation.features, creationFeatureFilterSet) ? styles.visible : ""}`} data-features={creation.features}>
+                            <article key={index} className={`${styles.creationComponents} ${doesFilterHas(new Set(creation.features), creationFeatureFilterSet) ? styles.visible : ""}`} data-features={creation.features}>
                                 <CreationComponent {...creation} />
                             </article>
                         ))
