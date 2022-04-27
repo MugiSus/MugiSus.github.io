@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
                 <meta name="twitter:creator" content="@MugiSus" />
                 <meta name="twitter:title" content="MugiSus.com" />
                 <meta name="twitter:description" content="The Portfolio of MugiSus" />
-                <meta name="twitter:image" content="/oyagi-icon.png" />
+                <meta name="twitter:image" content="https://www.mugisus.com/oyagi-icon.png" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
