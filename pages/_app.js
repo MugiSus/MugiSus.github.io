@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
                 <meta property="og:image" content="/oyagi-icon.png" />
                 <meta property="og:url" content="https://mugisus.com" />
                 <meta property="og:type" content="website" />
-                <meta name="twitter:card" content="summary_card" />
+                <meta name="twitter:card" content="summary" />
                 <meta name="twitter:site" content="@MugiSus" />
                 <meta name="twitter:creator" content="@MugiSus" />
                 <meta name="twitter:title" content="MugiSus.com" />
