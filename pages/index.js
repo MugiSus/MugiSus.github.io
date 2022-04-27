@@ -18,9 +18,9 @@ const doesFilterHas = (featureSet, filter) => filter.size === 0 || [...filter].e
 const creationFeatureFilterChange = (event) => {
     event.currentTarget.parentElement.classList.toggle(styles.selected, event.currentTarget.checked);
     if (event.currentTarget.checked)
-        creationFeatureFilterSet.add(event.currentTarget.value);
+        creationFeatureFilterSet.add(event.currentTarget.dataset.feature);
     else
-        creationFeatureFilterSet.delete(event.currentTarget.value);
+        creationFeatureFilterSet.delete(event.currentTarget.dataset.feature);
     
     let matchCount = 0;
     document.querySelectorAll(`.${styles.creationComponents}`).forEach(creationComponent => 
@@ -59,7 +59,7 @@ const Home = () => (
                     {
                         featureNames.map(feature => (
                             <label key={feature} className={`${styles.creationsFeatureFilter} ${creationFeatureFilterSet.has(feature) ? styles.selected : ""}`}>
-                                <input type="checkbox" className={`creation`} defaultChecked={creationFeatureFilterSet.has(feature)} value={feature} onChange={creationFeatureFilterChange} />
+                                <input type="checkbox" className={`creation`} defaultChecked={creationFeatureFilterSet.has(feature)} data-feature={feature} onChange={creationFeatureFilterChange} />
                                 <div className={`material-icons-outlined ${styles.creationsFeatureFilterIcon}`}>{creationfeaturesYaml[feature].icon}</div>
                                 <div className={styles.creationsFeatureFilterDescription}>{creationfeaturesYaml[feature].description}</div>
                             </label>

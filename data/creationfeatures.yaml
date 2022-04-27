@@ -32,6 +32,10 @@ powered-by-webgl:
     icon: auto_awesome
     description: Powered by WebGL
 
+powered-by-canvas:
+    icon: palette
+    description: Powered by Canvas
+
 made-with-scratch:
     icon: videogame_asset
     description: Made with Scratch

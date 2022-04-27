@@ -27,6 +27,7 @@ $height: 4rem;
 }
 
 .title {
+    z-index: 100;
     position: relative;
     font-size: 1.5rem;
     letter-spacing: 0.05rem;
@@ -34,6 +35,14 @@ $height: 4rem;
     margin: 0 auto;
     padding: 0.5rem 0;
     font-weight: 400;
+
+    &::before {
+        content: 'MugiSus.com';
+        z-index: -100;
+        position: absolute;
+        left: 0;
+        -webkit-text-stroke: 5px var(--color-blank);
+    }
 }
 
 .icons {
