@@ -36,6 +36,7 @@
 	letter-spacing: 0.05rem;
 	line-height: 2.2rem;
 	margin: 1.5rem 0rem;
+	user-select: text;
 
 	a {
 		text-decoration: underline;
@@ -214,6 +215,7 @@
     padding: 0;
     list-style: none;
 	line-height: 1.8rem;
+	user-select: text;
 
 	article {
 		time {
