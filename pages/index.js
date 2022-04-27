@@ -44,8 +44,6 @@ const Home = () => (
     <div>
         <Head>
             <title>MugiSus.com</title>
-            <link rel="icon" href="/favicon.ico" />
-            <meta name="description" content="The Portfolio of MugiSus" />
         </Head>
         
         <main className={styles.main}>

@@ -14,7 +14,7 @@ $height: 4rem;
 }
 
 .background {
-    z-index: -100;
+    z-index: -10000;
     position: absolute;
     top: 0;
     left: 0;
@@ -27,7 +27,7 @@ $height: 4rem;
 }
 
 .title {
-    z-index: 100;
+    z-index: 1000;
     position: relative;
     font-size: 1.5rem;
     letter-spacing: 0.05rem;
@@ -38,10 +38,10 @@ $height: 4rem;
 
     &::before {
         content: 'MugiSus.com';
-        z-index: -100;
+        z-index: -1000;
         position: absolute;
         left: 0;
-        -webkit-text-stroke: 5px var(--color-blank);
+        -webkit-text-stroke: 6px var(--color-blank);
     }
 }
 
