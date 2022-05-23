@@ -9,6 +9,16 @@
 #   pickup: boolean; default: false
 
 -
+    url: https://reactmood.vercel.app/
+    image: creations/reactmood.png
+    title: React:mood
+    date: 2022-05-07
+    description: |
+        オンライン会議やLTなどの視聴者のリアクションを色で計算・リアルタイムで反映し、全体の雰囲気を直感的に把握する、オンライン会議支援ツールです。
+        2022年5月初旬に開催されたKosenVenture社とゆめみ社による高専生のハッカソンで提出した作品で、アイデアを同チームの hachiya さんに頂きました。
+    features: [pickup, responsive, work-in-progress]
+
+-
     url: https://www.mugisus.com/neighbours/
     image: creations/neighbours.png
     title: neighbours
@@ -81,7 +91,7 @@
         2017年にScratchで制作したパズルゲームの第三版です。
         ステージ作成機能とクラウド共有機能* があります。
         (* 2020年のプラットフォーム仕様変更により、クラウド共有機能は事実上の廃止状態ですが、テキストでの出力・共有が可能です。)
-    features: [pickup, made-with-scratch]
+    features: [made-with-scratch]
 -
     url: https://scratch.mit.edu/projects/119005799/
     image: https://cdn.scratch.mit.edu/get_image/project/119005799_480x360.png
@@ -99,6 +109,7 @@
     date: 2015-02-09
     description: |
         2015年(小学5年)にScratchで制作したパズルゲームの初版です。
+        構想から実装まで全てを自分で完了した最初の作品です。
         ステージ作成機能とクラウド共有機能* があります。
         (* 2020年のプラットフォーム仕様変更により、クラウド共有機能は事実上の廃止状態です。)
     features: [pickup, awarded, made-with-scratch]
