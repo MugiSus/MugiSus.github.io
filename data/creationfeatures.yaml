@@ -16,10 +16,6 @@ pwa:
     icon: install_mobile
     description: Progressive Web App
 
-# no-mobile-compatible:
-#     icon: mobile_off
-#     description: No mobile compatible
-
 work-in-progress:
     icon: build
     description: Work in progress
@@ -39,3 +35,7 @@ powered-by-canvas:
 made-with-scratch:
     icon: videogame_asset
     description: Made with Scratch
+
+multiplayer:
+    icon: local_fire_department
+    description: Multiplayer
