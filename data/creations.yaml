@@ -17,7 +17,7 @@
         オンライン会議やLTなどの視聴者のリアクションを色で計算・リアルタイムで反映し、全体の雰囲気を直感的に把握する、オンライン会議支援ツールです。
         2022年5月初旬に開催されたKosenVenture社とゆめみ社によるハッカソンで提出した作品です。
         アイデアを同チームの hachiya さんに頂きました。
-    features: [pickup, responsive, firebase, work-in-progress]
+    features: [pickup, responsive, firebase]
 -
     url: https://www.mugisus.com/neighbours/
     image: creations/neighbours.png
