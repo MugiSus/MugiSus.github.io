@@ -36,6 +36,6 @@ made-with-scratch:
     icon: videogame_asset
     description: Made with Scratch
 
-multiplayer:
+firebase:
     icon: local_fire_department
-    description: Multiplayer
+    description: Firebase
