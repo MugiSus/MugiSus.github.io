@@ -82,7 +82,7 @@ const Home = () => {
                     </ul>
                 </div>
                 
-                <div className={styles.sections} id="articles">
+                {/* <div className={styles.sections} id="articles">
                     <div className={styles.titleContainer}>
                         <h1 className={styles.title}>Articles</h1>
                         <h2 className={styles.subtitle}>Coming soon, i bet</h2>
@@ -111,7 +111,7 @@ const Home = () => {
                             ))
                         }
                     </ul>
-                </div>
+                </div> */}
 
                 <div className={styles.sections} id="mugisus">
                     <div className={styles.titleContainer}>
