@@ -82,14 +82,14 @@ const Home = () => {
                     </ul>
                 </div>
                 
-                {/* <div className={styles.sections} id="articles">
+                <div className={styles.sections} id="articles">
                     <div className={styles.titleContainer}>
                         <h1 className={styles.title}>Articles</h1>
                         <h2 className={styles.subtitle}>Coming soon, i bet</h2>
                     </div>
 
                     <p className={styles.text}>
-                        記事リンクを登録するのがめんどくさくて手をつけていません。<br />
+                        工事中です。<br />
                         今並んでるのは一時的なものです。近いうちに本当に記事が並ぶと思います。<br />
                         今はクリックしても Google とかに飛ぶだけです。
                     </p>
@@ -111,7 +111,7 @@ const Home = () => {
                             ))
                         }
                     </ul>
-                </div> */}
+                </div>
 
                 <div className={styles.sections} id="mugisus">
                     <div className={styles.titleContainer}>
