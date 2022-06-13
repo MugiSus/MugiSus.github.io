@@ -27,6 +27,7 @@ body {
 	color: var(--color-content);
 	position: relative;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 a {
