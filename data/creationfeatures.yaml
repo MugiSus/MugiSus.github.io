@@ -1,7 +1,7 @@
 # <fearure id>:
 #   icon: string, Google Material Icons
 #   description: string
-#   default: boolean
+#   filter-default: boolean; optional; default: false
 
 pickup:
     icon: push_pin

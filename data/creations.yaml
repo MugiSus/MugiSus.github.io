@@ -1,12 +1,10 @@
 # -
 #   url: string
 #   image: string
-#   urlimage: string
 #   title: string
 #   date: Date
 #   description: string
 #   features: [string]
-#   pickup: boolean; default: false
 
 -
     url: https://reactmood.vercel.app/
