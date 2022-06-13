@@ -35,19 +35,18 @@ $height: 4rem;
     margin: 0 auto;
     padding: 0.5rem 0;
     font-weight: 400;
-
-    &::before {
-        content: 'MugiSus.com';
-        z-index: -1000;
-        position: absolute;
-        left: 0;
-        -webkit-text-stroke: 6px var(--color-blank);
-    }
 }
 
 .icons {
     font-size: 1.75rem;
-    margin: 0 1.25rem
+    margin: 0 1.25rem;
+}
+
+.strokedText::before {
+    content: attr(data-text);
+    z-index: -10000;
+    position: absolute;
+    -webkit-text-stroke: 6px var(--color-blank);
 }
 
 .placeholder {
