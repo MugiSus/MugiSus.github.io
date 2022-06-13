@@ -45,7 +45,7 @@ const Home = () => {
         let background = document.querySelector('.background');
         window.addEventListener("scroll", () => {
             // document.body.style.setProperty("--scroll-y", `${window.scrollY * -0.1}px`);
-            background.style.backgroundPositionY = `${window.scrollY * -0.15}px`
+            background.style.backgroundPositionY = `${window.scrollY * -0.2}px`
         });
     }
 
@@ -59,7 +59,7 @@ const Home = () => {
             <main className={styles.main}>
                 <div className={styles.sections} id="creations">
                     <div className={styles.titleContainer}>
-                        <h1 className={styles.title}>MugiSus&apos;s Creations</h1>
+                        <h1 className={styles.title}>MugiSus&apos; Creations</h1>
                         <h2 className={styles.subtitle}>Artworks & Products</h2>
                     </div>
                     
@@ -130,7 +130,7 @@ const Home = () => {
                     <p className={styles.text}>
                         国立木更津工業高等専門学校 情報工学科 の {caluclateAge("2003/05/05")} 歳です。<br />
                         現在は休学中で、近日中に進学も検討しています。<br />
-                        ハンドルネームは MugiSus で これは むぎすす と発音します。麦煤 と書くこともあります。<br />
+                        ハンドルネームは MugiSus で これは むぎすす と発音し、麦煤 と書くこともあります。<br />
                         正規表現は<code>/MugiSus|むぎ(すす)?|麦煤?/gi</code>です。<br />
                     </p>
 
