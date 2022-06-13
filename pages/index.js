@@ -41,6 +41,13 @@ const Home = () => {
         return today.getFullYear() - birthDate.getFullYear() - (today.getMonth() < birthDate.getMonth() || today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate());
     }
 
+    if (typeof window !== 'undefined') {
+        let background = document.querySelector('.background');
+        window.addEventListener("scroll", () => {
+            background.style.backgroundPositionY = `${window.scrollY * 0.2}px`
+        });
+    }
+
     return (
         <div>
             <Head>
