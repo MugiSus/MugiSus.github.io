@@ -45,7 +45,7 @@ const Home = () => {
         let background = document.querySelector('.background');
         window.addEventListener("scroll", () => {
             // document.body.style.setProperty("--scroll-y", `${window.scrollY * -0.1}px`);
-            background.style.backgroundPositionY = `${window.scrollY * -0.1}px`
+            background.style.backgroundPositionY = `${window.scrollY * -0.15}px`
         });
     }
 
