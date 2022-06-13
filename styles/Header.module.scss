@@ -61,7 +61,7 @@ $height: 4rem;
     background-color: #00000040;
     pointer-events: none;
     opacity: 0%;
-    transition: opacity 1s cubic-bezier(0.1, 0.8, 0.5, 1);
+    transition: opacity 0.4s cubic-bezier(0.1, 0.8, 0.5, 1);
     
     #checkboxSidemenu:checked ~ & {
         pointer-events: all;
@@ -71,15 +71,18 @@ $height: 4rem;
 
 .sidemenu {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
     z-index: 1000001;
     top: 0;
     bottom: 0;
     left: 0;
     width: 20rem;
-    max-width: 80vw;
+    max-width: 85vw;
     background-color: var(--color-blank);
     padding-left: 2rem;
-    transition: transform 0.8s cubic-bezier(0.1, 0.8, 0.2, 1);
+    transition: transform 1s cubic-bezier(0.1, 1, 0.2, 1);
     transform: translateX(-100%);
 
     #checkboxSidemenu:checked ~ & {
@@ -108,15 +111,22 @@ $height: 4rem;
     }
 
     h2 {
+        display: inline-block;
         font-size: 2rem;
-        margin: 2rem 0rem;
+        margin: 2rem 0rem 1rem;
         font-weight: 500;
     }
 
     h3 {
-        font-size: 1.6rem;
-        margin: 0.8rem 0rem;
+        display: inline-block;
+        font-size: 1.75rem;
+        margin: 0;
         font-weight: 400;
+    }
+
+    .sidemenuLinkImage {
+        width: 2.5rem;
+        height: 2.5rem;
     }
 }
 
