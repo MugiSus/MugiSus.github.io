@@ -1,4 +1,6 @@
 $height: 4rem;
+$sidemenuSlideIn: 1s cubic-bezier(0.1, 1, 0.2, 1);
+$sidemenuSlideOut: 0.5s cubic-bezier(0.4, 0, 0.8, 0.4);
 
 .headerContainer {
     z-index: 10000;
@@ -61,7 +63,7 @@ $height: 4rem;
     background-color: #00000048;
     pointer-events: none;
     opacity: 0%;
-    transition: opacity 0.4s cubic-bezier(0.1, 0.8, 0.5, 1);
+    transition: opacity 0.4s ease;
     
     #checkboxSidemenu:checked ~ & {
         pointer-events: all;
@@ -83,17 +85,19 @@ $height: 4rem;
     // background-color: var(--color-blank);
     padding-left: 2rem;
     padding-right: 2rem;
-    transition: transform 1s cubic-bezier(0.1, 1, 0.2, 1);
     transform: translateX(-100%);
+    transition: transform $sidemenuSlideOut;
     
     #checkboxSidemenu:checked ~ & {
         transform: translateX(0%);
+        transition: transform $sidemenuSlideIn;
         
         .background {
             background-position: 0 0;
+            transition: background-position $sidemenuSlideIn;
         }
     }
-
+    
     .background {
         z-index: -10000;
         position: absolute;
@@ -105,7 +109,7 @@ $height: 4rem;
         background-image: var(--image-bg);
         background-size: 25rem 50rem;
         background-position: -30rem;
-        transition: background-position 1s cubic-bezier(0.1, 1, 0.2, 1);
+        transition: background-position $sidemenuSlideOut;
     }
 
     .closeArrow {
