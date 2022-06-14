@@ -6,7 +6,9 @@ const Header = () => (
         <header className={styles.headerContainer}>
             <div className={styles.background} />
             <label htmlFor={styles.checkboxSidemenu} className={`material-icons-outlined ${styles.icons} ${styles.strokedText}`} data-text="menu">menu</label>
-            <div className={`${styles.title} ${styles.strokedText}`} data-text="MugiSus.com">MugiSus.com</div>
+            <Link href={""}>
+                <div className={`${styles.title} ${styles.strokedText}`} data-text="MugiSus.com">MugiSus.com</div>
+            </Link>
             <span className={`material-icons-outlined ${styles.icons} ${styles.strokedText}`} data-text="share">share</span>
         </header>
         <input type="checkbox" className={styles.checkboxSidemenu} id={styles.checkboxSidemenu} />
