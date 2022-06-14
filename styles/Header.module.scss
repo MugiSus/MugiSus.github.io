@@ -80,14 +80,32 @@ $height: 4rem;
     left: 0;
     width: 20rem;
     max-width: 80vw;
-    background-color: var(--color-blank);
+    // background-color: var(--color-blank);
     padding-left: 2rem;
     padding-right: 2rem;
     transition: transform 1s cubic-bezier(0.1, 1, 0.2, 1);
     transform: translateX(-100%);
-
+    
     #checkboxSidemenu:checked ~ & {
         transform: translateX(0%);
+        
+        .background {
+            background-position: 0 0;
+        }
+    }
+
+    .background {
+        z-index: -10000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 100%;
+        background-image: var(--image-bg);
+        background-size: 25rem 50rem;
+        background-position: -30rem;
+        transition: background-position 1s cubic-bezier(0.1, 1, 0.2, 1);
     }
 
     .closeArrow {
@@ -98,18 +116,6 @@ $height: 4rem;
         cursor: pointer;
     }
 
-    .background {
-        z-index: -10000;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 25%;
-        background-image: var(--image-bg);
-        background-size: 25rem 50rem;
-        background-position: center;
-    }
 
     h2 {
         display: inline-block;
@@ -130,9 +136,11 @@ $height: 4rem;
 
     .sidemenuLinkImage {
         cursor: pointer;
-        margin: 0.25rem;
-        width: 2.5rem;
-        height: 2.5rem;
+        padding: 0.25rem;
+        width: 3rem;
+        height: 3rem;
+        background-color: var(--color-blank);
+        border-radius: 25%;
     }
 }
 
