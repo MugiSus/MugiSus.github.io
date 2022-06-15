@@ -6,7 +6,7 @@ const Header = () => (
         <header className={styles.headerContainer}>
             <div className={styles.background} />
             <label htmlFor={styles.checkboxSidemenu} className={`material-icons-outlined ${styles.icons} ${styles.strokedText}`} data-text="menu">menu</label>
-            <Link href={""}>
+            <Link href={"/"}>
                 <div className={`${styles.title} ${styles.strokedText}`} data-text="MugiSus.com">MugiSus.com</div>
             </Link>
             <span className={`material-icons-outlined ${styles.icons} ${styles.strokedText}`} data-text="share">share</span>

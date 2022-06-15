@@ -1,7 +1,12 @@
+import Head from 'next/head';
 import styles from '../styles/NotFound.module.scss';
 
 const NotFound = () => (
     <div className={styles.container}>
+        <Head>
+            <title>404 - Not Found</title>
+        </Head>
+
         <div className={styles.message}>
             <div className={styles.statusCode}>
                 404

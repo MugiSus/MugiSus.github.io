@@ -1,4 +1,4 @@
-$height: 4rem;
+$height: var(--header-height);
 $sidemenuSlideIn: 1s cubic-bezier(0.1, 1, 0.2, 1);
 $sidemenuSlideOut: 0.6s cubic-bezier(0.6, 0.05, 0.6, 0.4);
 
