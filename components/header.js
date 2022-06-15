@@ -17,19 +17,19 @@ const Header = () => (
         <div className={styles.sidemenu}>
             <div className={styles.background} />
             <label htmlFor={styles.checkboxSidemenu} className={`material-icons-outlined ${styles.closeArrow} ${styles.strokedText}`} data-text="arrow_back">arrow_back</label>
-            <Link href={""}>
+            <Link href={"/"}>
                 <h2 className={styles.strokedText} data-text="MugiSus.com">MugiSus.com</h2>
             </Link>
-            <Link href={"#creations"}>
+            <Link href={"/#creations"}>
                 <h3 className={styles.strokedText} data-text="Creations">Creations</h3>
             </Link>
-            <Link href={"#articles"}>
+            <Link href={"/#articles"}>
                 <h3 className={styles.strokedText} data-text="Articles">Articles</h3>
             </Link>
-            <Link href={"#mugisus"}>
+            <Link href={"/#mugisus"}>
                 <h3 className={styles.strokedText} data-text="MugiSus">MugiSus</h3>
             </Link>
-            <Link href={"#careers"}>
+            <Link href={"/#careers"}>
                 <h3 className={styles.strokedText} data-text="Careers">Careers</h3>
             </Link>
             <Link href={"https://twitter.com/MugiSus"}>
