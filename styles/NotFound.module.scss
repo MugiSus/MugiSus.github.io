@@ -15,6 +15,8 @@
     .statusCode {
         font-size: 1.8rem;
         font-weight: 300;
+        letter-spacing: 0.12rem;
+        font-variant: tabular-nums;
     }
     
     .separator {
@@ -26,5 +28,6 @@
     .messageText {
         font-size: 1.2rem;
         font-weight: 300;
+        letter-spacing: 0.06rem;
     }
 }
