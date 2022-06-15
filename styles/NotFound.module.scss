@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    width: 60vw;
+    width: 80vw;
     height: calc(100vh - var(--header-height));
 }
 
@@ -24,6 +24,7 @@
         background-color: var(--color-content);
         width: 1px;
         height: 3rem;
+        opacity: 0.25;
     }
     
     .messageText {
