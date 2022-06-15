@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: calc(100vh - 4rem);
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    .statusCode {
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+    
+    .separator {
+        background-color: var(--color-content);
+        width: 1px;
+        height: 3rem;
+    }
+    
+    .messageText {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+}
