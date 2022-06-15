@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    margin: auto;
+    width: 60vw;
     height: calc(100vh - var(--header-height));
 }
 
@@ -10,10 +11,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.4rem;
 
     .statusCode {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         font-weight: 300;
         letter-spacing: 0.12rem;
         font-variant: tabular-nums;
@@ -26,8 +27,9 @@
     }
     
     .messageText {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 300;
         letter-spacing: 0.06rem;
+        line-height: 1.4rem;
     }
 }
