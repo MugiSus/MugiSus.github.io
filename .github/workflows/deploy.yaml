@@ -37,7 +37,7 @@ jobs:
 
             # /404/index.html をルートディレクトリに移動する
             -
-                name: Copy 404 page to root
+                name: Move 404 page to root directory
                 run: mv ./out/404/index.html ./out/404.html
 
             # GitHub Pages にデプロイする
