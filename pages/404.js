@@ -1,22 +1,5 @@
-import Head from 'next/head';
-import styles from '../styles/NotFound.module.scss';
+import ErrorMessage from "../components/errorMessage.js"
 
-const NotFound = () => (
-    <div className={styles.container}>
-        <Head>
-            <title>404 - Not Found</title>
-        </Head>
-
-        <div className={styles.message}>
-            <div className={styles.statusCode}>
-                404
-            </div>
-            <div className={styles.separator} />
-            <div className={styles.messageText}>
-                This page could not be found.
-            </div>
-        </div>
-    </div>
+const ErrorPage = () => (
+    <ErrorMessage statusCode={404} title={"Not Found"} message={"This page could not be found."} />
 )
-
-export default NotFound;
