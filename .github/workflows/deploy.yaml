@@ -35,10 +35,10 @@ jobs:
                 name: Build
                 run: yarn build
 
-            # /404/index.html をルートディレクトリにコピーする
+            # /404/index.html をルートディレクトリに移動する
             -
                 name: Copy 404 page to root
-                run: cp ./out/404/index.html ./out/404.html
+                run: mv ./out/404/index.html ./out/404.html
 
             # GitHub Pages にデプロイする
             -
