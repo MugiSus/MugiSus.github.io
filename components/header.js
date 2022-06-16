@@ -32,12 +32,14 @@ const Header = () => (
             <Link href={"/#careers"}>
                 <h3 className={styles.strokedText} data-text="Careers">Careers</h3>
             </Link>
-            <Link href={"https://twitter.com/MugiSus"}>
-                <img className={styles.sidemenuLinkImage} src="/link-twitter.svg" alt="GitHub" />
-            </Link>
-            <Link href={"https://github.com/MugiSus"}>
-                <img className={styles.sidemenuLinkImage} src="/link-github.svg" alt="GitHub" />
-            </Link>
+            <div className={styles.socialLinks}>
+                <Link href={"https://twitter.com/MugiSus"}>
+                    <img className={styles.sidemenuLinkImage} src="/link-twitter.svg" alt="GitHub" />
+                </Link>
+                <Link href={"https://github.com/MugiSus"}>
+                    <img className={styles.sidemenuLinkImage} src="/link-github.svg" alt="GitHub" />
+                </Link>
+            </div>
         </div>
     </div>
 )
