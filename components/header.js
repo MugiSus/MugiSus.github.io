@@ -34,10 +34,10 @@ const Header = () => (
             </Link>
             <div className={styles.socialLinks}>
                 <Link href={"https://twitter.com/MugiSus"}>
-                    <img className={styles.sidemenuLinkImage} src="/link-twitter.svg" alt="GitHub" />
+                    <img className={styles.socialLinkImage} src="/link-twitter.svg" alt="GitHub" />
                 </Link>
                 <Link href={"https://github.com/MugiSus"}>
-                    <img className={styles.sidemenuLinkImage} src="/link-github.svg" alt="GitHub" />
+                    <img className={styles.socialLinkImage} src="/link-github.svg" alt="GitHub" />
                 </Link>
             </div>
         </div>
