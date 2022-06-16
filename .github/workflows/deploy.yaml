@@ -35,9 +35,9 @@ jobs:
                 name: Build
                 run: yarn build
 
-            # /404/index.html を /404.html にコピーする
+            # /404/index.html をルートディレクトリにコピーする
             -
-                name: Copy 404 page to root directory
+                name: Copy 404 page to root
                 run: cp ./out/404/index.html ./out/404.html
 
             # GitHub Pages にデプロイする
