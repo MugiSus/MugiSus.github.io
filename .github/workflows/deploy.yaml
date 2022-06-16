@@ -47,4 +47,4 @@ jobs:
             # /404/index.html を /404.html にコピーする
             -
                 name: Copy 404 page to root directory
-                run: cp /404/index.html /404.html
+                run: cp ./404/index.html ./404.html
