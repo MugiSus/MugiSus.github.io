@@ -43,3 +43,8 @@ jobs:
                     github_token: ${{ secrets.GITHUB_TOKEN }}
                     publish_dir: out
                     cname: www.mugisus.com
+            
+            # /404/index.html を /404.html にコピーする
+            -
+                name: Copy 404 page to root directory
+                run: cp ./out/404/index.html ./out/404.html
