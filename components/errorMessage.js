@@ -11,7 +11,7 @@ const ErrorMessage = ({statusCode, title, message}) => (
             <div className={styles.statusCode}>
                 {statusCode}
             </div>
-            <div className={styles.separator} />
+            <div className={styles.verticalLine} />
             <div className={styles.messageText}>
                 {message}
             </div>

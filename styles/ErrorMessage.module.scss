@@ -21,11 +21,10 @@
         font-variant: tabular-nums;
     }
     
-    .separator {
-        background-color: var(--color-content);
+    .verticalLine {
+        background-color: var(--color-border);
         width: 1px;
         height: 3rem;
-        opacity: 0.25;
     }
     
     .messageText {
