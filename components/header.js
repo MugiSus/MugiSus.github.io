@@ -11,8 +11,9 @@ const Header = () => (
             </Link>
             <span className={`material-icons-outlined ${styles.icons} ${styles.strokedText}`} data-text="share">share</span>
         </header>
-        <input type="checkbox" className={styles.checkboxSidemenu} id={styles.checkboxSidemenu} />
         <div className={styles.placeholder} />
+
+        <input type="checkbox" className={styles.checkboxSidemenu} id={styles.checkboxSidemenu} />
         <label htmlFor={styles.checkboxSidemenu} className={styles.sidemenuBackground} />
         <div className={styles.sidemenu}>
             <div className={styles.background} />
