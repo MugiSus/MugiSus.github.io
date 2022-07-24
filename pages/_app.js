@@ -21,10 +21,6 @@ function MyApp({ Component, pageProps }) {
                 <meta name="twitter:image" content="https://www.mugisus.com/oyagi-icon.png" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-			<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
-            <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
             <Header />
 			<Component {...pageProps} />
             <Footer />
