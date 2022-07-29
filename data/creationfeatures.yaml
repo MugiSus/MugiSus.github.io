@@ -39,3 +39,7 @@ made-with-scratch:
 firebase:
     icon: local_fire_department
     description: Firebase
+
+drawings:
+    icon: draw
+    description: Drawings

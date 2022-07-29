@@ -25,7 +25,7 @@ const Home = () => {
             creationFeatureFilterSet.delete(event.currentTarget.dataset.feature);
         
         let matchCount = 0;
-        document.querySelectorAll(`.${styles.creationComponents}`).forEach(creationComponent => 
+        document.querySelectorAll(`.${styles.creationComponents}`).forEach(creationComponent => // we don't use reduce here because it is undefined in NodeList
             matchCount += creationComponent.classList.toggle(
                 styles.visible,
                 doesFilterHas(new Set(creationComponent.dataset.features.split(",")), creationFeatureFilterSet)

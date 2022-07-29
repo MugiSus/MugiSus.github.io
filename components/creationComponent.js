@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
 import { format as dateformat } from 'date-fns'
 import styles from '../styles/CreationComponent.module.scss'

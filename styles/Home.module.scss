@@ -129,9 +129,10 @@
 
 	.creationComponents {
 		display: none;
-
+		
 		&.visible {
 			display: block;
+			animation: show 1s;
 		}
 	}
 
