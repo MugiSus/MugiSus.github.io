@@ -13,6 +13,7 @@
         object-fit: cover;
         object-position: center;
         transition: filter 0.2s ease;
+        // filter: grayscale(100%) opacity(80%);
     }
     
     .propsContainer {

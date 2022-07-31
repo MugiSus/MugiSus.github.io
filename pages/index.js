@@ -163,7 +163,7 @@ const Home = () => {
 
                     <ul className={styles.careersUl}>
                         {
-                            careersYaml.sort((a, b) => a.date.getTime() - b.date.getTime()).map((career, index) => (
+                            [...careersYaml.sort((a, b) => a.date.getTime() - b.date.getTime()), {date: Date.now(), content:"いま"}].map((career, index) => (
                                 <li key={index}>
                                     <time>{dateformat(career.date, 'yyyy.MM.dd')}</time>
                                     <span>{career.content}</span>

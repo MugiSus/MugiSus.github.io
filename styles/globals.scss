@@ -1,21 +1,21 @@
 :root {
-	--color-light-green: #BBE289;
-	--color-light-purple: #B9ACDE;
-	--color-light-blank: #FDFDFD;
-	--color-light-content: #101010;
-	--image-light-bg: url('../public/bg-light.svg');
+	--color-lightmode-green: #BBE289;
+	--color-lightmode-purple: #B9ACDE;
+	--color-lightmode-blank: #FDFDFD;
+	--color-lightmode-content: #101010;
+	--image-lightmode-bg: url('../public/bg-light.svg');
 
-	--color-green: var(--color-light-green);
-	--color-purple: var(--color-light-purple);
-	--color-blank: var(--color-light-blank);
-	--color-content: var(--color-light-content);
+	--color-green: var(--color-lightmode-green);
+	--color-purple: var(--color-lightmode-purple);
+	--color-blank: var(--color-lightmode-blank);
+	--color-content: var(--color-lightmode-content);
 	--color-border: #C0C0C0;
 	--color-pale-green: #E4F3D0;
 	--color-pale-purple: #E3DEF2;
 	--color-dark-green: #6E8C46;
 	--color-dark-purple: #685F82;
 	--color-selected: #504b44;
-	--image-bg: var(--image-light-bg);
+	--image-bg: var(--image-lightmode-bg);
 
 	--header-height: 4rem;
 }
