@@ -58,6 +58,8 @@ const Home = () => {
             </Head>
             
             <main className={styles.main}>
+                {/* <img className={styles.MugiSusDesignsAndProductionsImage} src="/MugiSus_Designs_and_Productions.png" alt="MugiSus_Designs_and_Productions" /> */}
+
                 <div className={styles.sections} id="creations">
                     <div className={styles.titleContainer}>
                         <h1 className={styles.title}>MugiSus&apos; Creations</h1>
