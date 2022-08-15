@@ -46,8 +46,8 @@ const Home = () => {
         let background = document.getElementsByClassName("background")[0];
         // let headerImage = document.getElementsByClassName(styles.MugiSusDesignsAndProductionsImage)[0];
         window.addEventListener("scroll", () => {
+            background.style.backgroundPositionY = `${window.scrollY * -0.25}px`;
             // document.body.style.setProperty("--scroll-y", `${window.scrollY * -0.1}px`);
-            background.style.backgroundPositionY = `${window.scrollY * -0.2}px`;
 
             // headerImage.style.transform = `translateY(${window.scrollY * 0.6}px)`;
             // headerImage.style.opacity = `${1 - window.scrollY / headerImage.offsetHeight}`;
