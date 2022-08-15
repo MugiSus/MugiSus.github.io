@@ -44,7 +44,7 @@ const Home = () => {
 
     if (typeof window !== 'undefined') {
         let background = document.getElementsByClassName("background")[0];
-        let headerImage = document.getElementsByClassName(styles.MugiSusDesignsAndProductionsImage)[0];
+        // let headerImage = document.getElementsByClassName(styles.MugiSusDesignsAndProductionsImage)[0];
         window.addEventListener("scroll", () => {
             // document.body.style.setProperty("--scroll-y", `${window.scrollY * -0.1}px`);
             background.style.backgroundPositionY = `${window.scrollY * -0.2}px`;
