@@ -12,7 +12,7 @@
     title: The Most Accurate Clock You Can Get
     date: 2022-08-09
     description: |
-        あなたが手に入れることのできる最も正確な時計です。GPSで緯度と経度を取得し、それを用いて僅かな時差を可視化します。GPSを有効にしてお楽しみください。
+        あなたが手に入れることのできる最も正確な時計です。GPSで緯度と経度を取得し、僅かな時差を可視化します。GPSを有効にしてお楽しみください。
     features: [pickup, powered-by-webgl, responsive]
 
 -
@@ -22,7 +22,7 @@
     date: 2022-05-07
     description: |
         オンライン会議やLTなどの視聴者のリアクションを色で計算・リアルタイムで反映し、全体の雰囲気を直感的に把握する、オンライン会議支援ツールです。
-        2022年5月初旬に開催されたKosenVenture社とゆめみ社によるハッカソンで提出した作品です。
+        2022年5月初旬に開催されたKosenVenture社とゆめみ社による共同企画ハッカソンで提出した作品です。
         アイデアを同チームの hachiya さんに頂きました。
     features: [pickup, powered-by-canvas, responsive, firebase]
 -
