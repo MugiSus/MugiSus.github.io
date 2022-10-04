@@ -13,7 +13,7 @@
     date: 2022-08-09
     description: |
         あなたが手に入れることのできる最も正確な時計です。GPSで緯度と経度を取得し、それを用いて僅かな時差を可視化します。GPSを有効にしてお楽しみください。
-    features: [pickup, powered-by-webgl, responsive, firebase]
+    features: [pickup, powered-by-webgl, responsive]
 
 -
     url: https://reactmood.vercel.app/
