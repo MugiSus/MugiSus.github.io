@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { format as dateformat } from 'date-fns'
 import styles from '../styles/Home.module.scss'
+import { useEffect } from 'react';
 
 import CreationComponent from '../components/creationComponent.js';
 
@@ -36,23 +37,17 @@ const Home = () => {
         console.log(creationFeatureFilterSet, matchCount);
     }
 
-    const caluclateAge = (birthday) => {
-        const today = new Date();
-        const birthDate = new Date(birthday);
-        return today.getFullYear() - birthDate.getFullYear() - (today.getMonth() < birthDate.getMonth() || today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate());
-    }
+    const caluclateAge = (birthday) => new Date(Date.now() - new Date(birthday)).getUTCFullYear() - 1970;
 
-    if (typeof window !== 'undefined') {
-        let background = document.getElementsByClassName("background")[0];
-        // let headerImage = document.getElementsByClassName(styles.MugiSusDesignsAndProductionsImage)[0];
-        window.addEventListener("scroll", () => {
-            background.style.backgroundPositionY = `${window.scrollY * -0.25}px`;
-            // document.body.style.setProperty("--scroll-y", `${window.scrollY * -0.1}px`);
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            let background = document.getElementsByClassName("background")[0];
 
-            // headerImage.style.transform = `translateY(${window.scrollY * 0.6}px)`;
-            // headerImage.style.opacity = `${1 - window.scrollY / headerImage.offsetHeight}`;
-        });
-    }
+            window.addEventListener("scroll", () => {
+                background.style.backgroundPositionY = `${window.scrollY * -0.2}px`;
+            });
+        }
+    }, [])
 
     return (
         <div>
@@ -62,8 +57,6 @@ const Home = () => {
             </Head>
             
             <main className={styles.main}>
-                {/* <img className={styles.MugiSusDesignsAndProductionsImage} src="/MugiSus_Designs_and_Productions.png" alt="MugiSus_Designs_and_Productions" /> */}
-
                 <div className={styles.sections} id="creations">
                     <div className={styles.titleContainer}>
                         <h1 className={styles.title}>MugiSus&apos; Creations</h1>
