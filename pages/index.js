@@ -53,15 +53,24 @@ const Home = () => {
     return (
         <div>
             <Head>
-                <title>MugiSus.com</title>
-                <meta name="description" content="国立木更津工業高等専門学校 情報工学科 の MugiSus です。これは むぎすす と発音し、麦煤 と書くこともあります。" />
+                <title>
+                    MugiSus.com
+                </title>
+                <meta
+                    name="description"
+                    content="国立木更津工業高等専門学校 情報工学科 の MugiSus です。これは むぎすす と発音し、麦煤 と書くこともあります。"
+                />
             </Head>
             
             <main className={styles.main}>
                 <div className={styles.sections} id="creations">
                     <div className={styles.titleContainer}>
-                        <h1 className={styles.title}>MugiSus&apos; Creations</h1>
-                        <h2 className={styles.subtitle}>Artworks & Products</h2>
+                        <h1 className={styles.title}>
+                            MugiSus&apos; Creations
+                        </h1>
+                        <h2 className={styles.subtitle}>
+                            Artworks & Products
+                        </h2>
                     </div>
                     
                     <div className={styles.creationsFeatureFiltersContainer}>
@@ -207,12 +216,8 @@ const Home = () => {
                                 {date: Date.now(), content:"いま"}
                             ].map((career, index) => (
                                 <li key={index}>
-                                    <time>
-                                        {dateformat(career.date, 'yyyy.MM.dd')}
-                                    </time>
-                                    <span>
-                                        {career.content}
-                                    </span>
+                                    <time>{dateformat(career.date, 'yyyy.MM.dd')}</time>
+                                    <span>{career.content}</span>
                                 </li>
                             ))
                         }
