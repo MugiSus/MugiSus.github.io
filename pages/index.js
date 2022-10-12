@@ -67,10 +67,22 @@ const Home = () => {
                     <div className={styles.creationsFeatureFiltersContainer}>
                         {
                             featureNames.map(feature => (
-                                <label key={feature} className={`${styles.creationsFeatureFilter} ${selectedFeatures.has(feature) ? styles.selected : ""}`}>
-                                    <input type="checkbox" defaultChecked={selectedFeatures.has(feature)} data-feature={feature} onChange={creationFeatureFilterChange} />
-                                    <div className={`material-icons-outlined ${styles.creationsFeatureFilterIcon}`}>{creationfeaturesYaml[feature].icon}</div>
-                                    <div className={styles.creationsFeatureFilterDescription}>{creationfeaturesYaml[feature].description}</div>
+                                <label
+                                    key={feature}
+                                    className={`${styles.creationsFeatureFilter} ${selectedFeatures.has(feature) ? styles.selected : ""}`}
+                                >
+                                    <input
+                                        type="checkbox" 
+                                        defaultChecked={selectedFeatures.has(feature)}
+                                        data-feature={feature}
+                                        onChange={creationFeatureFilterChange}
+                                    />
+                                    <div className={`material-icons-outlined ${styles.creationsFeatureFilterIcon}`}>
+                                        {creationfeaturesYaml[feature].icon}
+                                    </div>
+                                    <div className={styles.creationsFeatureFilterDescription}>
+                                        {creationfeaturesYaml[feature].description}
+                                    </div>
                                 </label>
                             ))
                         }
@@ -79,22 +91,34 @@ const Home = () => {
                     <ul className={styles.creationUl}>
                         {
                             creationsYaml.sort((a, b) => b.date.getTime() - a.date.getTime()).map((creation, index) => (
-                                <article key={index} className={`${styles.creationComponents} ${doesFilterHas(new Set(creation.features), selectedFeatures) ? styles.visible : ""}`} data-features={creation.features}>
+                                <article 
+                                    key={index}
+                                    className={`${styles.creationComponents} ${doesFilterHas(new Set(creation.features), selectedFeatures) ? styles.visible : ""}`}
+                                    data-features={creation.features}
+                                >
                                     <CreationComponent {...creation} />
                                 </article>
                             ))
                         }
                         <div className={styles.noCreationsMatch}>
-                            <span className={`material-icons-outlined ${styles.noCreationsMatchIcon}`}>filter_alt</span>
-                            <span className={styles.noCreationsMatchText}>No Creations Match Your Filter (!)</span>
+                            <span className={`material-icons-outlined ${styles.noCreationsMatchIcon}`}>
+                                filter_alt
+                            </span>
+                            <span className={styles.noCreationsMatchText}>
+                                No Creations Match Your Filter (!)
+                            </span>
                         </div>
                     </ul>
                 </div>
                 
                 <div className={styles.sections} id="articles">
                     <div className={styles.titleContainer}>
-                        <h1 className={styles.title}>Articles</h1>
-                        <h2 className={styles.subtitle}>Coming soon, i bet</h2>
+                        <h1 className={styles.title}>
+                            Articles
+                        </h1>
+                        <h2 className={styles.subtitle}>
+                            Coming soon, i bet
+                        </h2>
                     </div>
 
                     <p className={styles.text}>
@@ -113,7 +137,9 @@ const Home = () => {
                                                 <time>{dateformat(article.date, 'yyyy.MM.dd')}</time><br />
                                                 <span>{article.title}</span>
                                             </div>
-                                            <span className={`material-icons-outlined ${styles.articleIcon}`}>arrow_forward</span>
+                                            <span className={`material-icons-outlined ${styles.articleIcon}`}>
+                                                arrow_forward
+                                            </span>
                                         </a>
                                     </Link>
                                 </article>
@@ -124,20 +150,29 @@ const Home = () => {
 
                 <div className={styles.sections} id="mugisus">
                     <div className={styles.titleContainer}>
-                        <h1 className={styles.title}>MugiSus</h1>
-                        <h2 className={styles.subtitle}>Minato Masayuki</h2>
+                        <h1 className={styles.title}>
+                            MugiSus
+                        </h1>
+                        <h2 className={styles.subtitle}>
+                            Minato Masayuki
+                        </h2>
                     </div>
 
                     <p className={styles.text}>
-                        慶應義塾大学(SFC)環境情報学部 の {caluclateAge("2003/05/05")} 歳です。<br />
-                        元々は木更津高専の情報工学科で寮生活をしていました。(高専寮はお勧めしません)<br />
+                        元高専生、現慶應義塾大学(SFC)環境情報学部 の {caluclateAge("2003/05/05")} 歳です。<br />
                         ハンドルネームは MugiSus で これは むぎすす と発音し、麦煤 と書くこともあります。<br />
                         正規表現は<code>/MugiSus|むぎ(すす)?|麦煤?/gi</code>です。<br />
                     </p>
 
                     <div className={styles.oyagiIconContainer}>
                         <div className={styles.oyagiIconBorder}>
-                            <img src="/oyagi-icon.png" alt="MugiSus" height="192" width="192" className={styles.oyagiIcon} />
+                            <img
+                                className={styles.oyagiIcon}
+                                src="/oyagi-icon.png"
+                                alt="MugiSus"
+                                height="192"
+                                width="192"
+                            />
                         </div>
                     </div>
 
@@ -157,16 +192,27 @@ const Home = () => {
 
                 <div className={styles.sections} id="careers">
                     <div className={styles.titleContainer}>
-                        <h1 className={styles.title}>Careers</h1>
-                        <h2 className={styles.subtitle}>More about me</h2>
+                        <h1 className={styles.title}>
+                            Careers
+                        </h1>
+                        <h2 className={styles.subtitle}>
+                            More about me
+                        </h2>
                     </div>
 
                     <ul className={styles.careersUl}>
                         {
-                            [...careersYaml.sort((a, b) => a.date.getTime() - b.date.getTime()), {date: Date.now(), content:"いま"}].map((career, index) => (
+                            [
+                                ...careersYaml.sort((a, b) => a.date.getTime() - b.date.getTime()),
+                                {date: Date.now(), content:"いま"}
+                            ].map((career, index) => (
                                 <li key={index}>
-                                    <time>{dateformat(career.date, 'yyyy.MM.dd')}</time>
-                                    <span>{career.content}</span>
+                                    <time>
+                                        {dateformat(career.date, 'yyyy.MM.dd')}
+                                    </time>
+                                    <span>
+                                        {career.content}
+                                    </span>
                                 </li>
                             ))
                         }
