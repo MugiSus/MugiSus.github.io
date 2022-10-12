@@ -14,27 +14,28 @@ import creationfeaturesYaml from '../data/creationfeatures.yaml'
 
 const Home = () => {
     const featureNames = Object.keys(creationfeaturesYaml);
-    const creationFeatureFilterSet = new Set(featureNames.filter(feature => creationfeaturesYaml[feature]["filter-default"]));
+    const selectedFeatures = new Set(featureNames.filter(feature => creationfeaturesYaml[feature]["filter-default"]));
 
-    const doesFilterHas = (featureSet, filter) => filter.size === 0 || [...filter].every(feature => featureSet.has(feature));
+    const doesFilterHas = (featureSet, filter) => [...filter].every(feature => featureSet.has(feature));
 
     const creationFeatureFilterChange = (event) => {
         event.currentTarget.parentElement.classList.toggle(styles.selected, event.currentTarget.checked);
+        
         if (event.currentTarget.checked)
-            creationFeatureFilterSet.add(event.currentTarget.dataset.feature);
+            selectedFeatures.add(event.currentTarget.dataset.feature);
         else
-            creationFeatureFilterSet.delete(event.currentTarget.dataset.feature);
+            selectedFeatures.delete(event.currentTarget.dataset.feature);
         
         let matchCount = 0;
         document.querySelectorAll(`.${styles.creationComponents}`).forEach(creationComponent => // we don't use reduce here because it is undefined in NodeList
             matchCount += creationComponent.classList.toggle(
                 styles.visible,
-                doesFilterHas(new Set(creationComponent.dataset.features.split(",")), creationFeatureFilterSet)
+                doesFilterHas(new Set(creationComponent.dataset.features.split(",")), selectedFeatures)
             )
         );
 
         document.querySelector(`.${styles.noCreationsMatch}`).classList.toggle(styles.visible, matchCount === 0);
-        console.log(creationFeatureFilterSet, matchCount);
+        console.log(selectedFeatures, matchCount);
     }
 
     const caluclateAge = (birthday) => new Date(Date.now() - new Date(birthday)).getUTCFullYear() - 1970;
@@ -66,8 +67,8 @@ const Home = () => {
                     <div className={styles.creationsFeatureFiltersContainer}>
                         {
                             featureNames.map(feature => (
-                                <label key={feature} className={`${styles.creationsFeatureFilter} ${creationFeatureFilterSet.has(feature) ? styles.selected : ""}`}>
-                                    <input type="checkbox" className={`creation`} defaultChecked={creationFeatureFilterSet.has(feature)} data-feature={feature} onChange={creationFeatureFilterChange} />
+                                <label key={feature} className={`${styles.creationsFeatureFilter} ${selectedFeatures.has(feature) ? styles.selected : ""}`}>
+                                    <input type="checkbox" defaultChecked={selectedFeatures.has(feature)} data-feature={feature} onChange={creationFeatureFilterChange} />
                                     <div className={`material-icons-outlined ${styles.creationsFeatureFilterIcon}`}>{creationfeaturesYaml[feature].icon}</div>
                                     <div className={styles.creationsFeatureFilterDescription}>{creationfeaturesYaml[feature].description}</div>
                                 </label>
@@ -78,7 +79,7 @@ const Home = () => {
                     <ul className={styles.creationUl}>
                         {
                             creationsYaml.sort((a, b) => b.date.getTime() - a.date.getTime()).map((creation, index) => (
-                                <article key={index} className={`${styles.creationComponents} ${doesFilterHas(new Set(creation.features), creationFeatureFilterSet) ? styles.visible : ""}`} data-features={creation.features}>
+                                <article key={index} className={`${styles.creationComponents} ${doesFilterHas(new Set(creation.features), selectedFeatures) ? styles.visible : ""}`} data-features={creation.features}>
                                     <CreationComponent {...creation} />
                                 </article>
                             ))
