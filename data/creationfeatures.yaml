@@ -43,3 +43,7 @@ firebase:
 drawings:
     icon: draw
     description: Drawings
+
+packages:
+    icon: inventory_2
+    description: Packages

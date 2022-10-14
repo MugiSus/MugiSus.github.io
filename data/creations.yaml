@@ -7,6 +7,14 @@
 #   features: [string]
 
 -
+    url: https://www.npmjs.com/package/world-timestamp
+    image: creations/npm-package.png
+    title: world-timestamp
+    date: 2022-10-14
+    description: ウェブ上のサーバーから全世界共通のタイムスタンプを取得するプロジェクトのためのnpmパッケージです。
+    features: [packages]
+
+-
     url: https://themostaccurateclockyoucanget.vercel.app/
     image: creations/themostaccurateclockyoucanget.png
     title: The Most Accurate Clock You Can Get
