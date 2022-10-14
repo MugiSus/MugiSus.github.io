@@ -250,3 +250,16 @@
 		}
 	}
 }
+
+@media screen and (min-width: 1800px) {
+	.main {
+		max-width: 2000px;
+	}
+	.creationUl {
+		grid-template-columns: 1fr 1fr 1fr;
+
+		.noCreationsMatch {
+			grid-column: 1 / 2;
+		}
+	}
+}
