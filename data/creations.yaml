@@ -11,7 +11,9 @@
     image: creations/npm-package.png
     title: world-timestamp
     date: 2022-10-14
-    description: ウェブ上のサーバーから全世界共通のタイムスタンプを取得するプロジェクトのためのnpmパッケージです。
+    description: |
+        ウェブ上のサーバーから世界共通のタイムスタンプを取得するプロジェクトのためのnpmパッケージです。
+        プロジェクト "The Most Accurate Clock You Can Get" で使用されています。
     features: [packages]
 
 -
@@ -21,6 +23,7 @@
     date: 2022-08-09
     description: |
         あなたが手に入れることのできる最も正確な時計です。GPSで緯度と経度を取得し、僅かな時差を可視化します。GPSを有効にしてお楽しみください。
+        (自作パッケージ "world-timestamp" を使用しています。)
     features: [pickup, powered-by-webgl, responsive]
 
 -
