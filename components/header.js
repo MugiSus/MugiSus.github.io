@@ -6,11 +6,17 @@ const Header = () => (
     <div>
         <header className={styles.headerContainer}>
             <div className={styles.background} />
-            <label htmlFor={styles.checkboxSidemenu} className={`material-icons-outlined ${styles.icons} ${styles.strokedText}`} data-text="menu">menu</label>
+            <label htmlFor={styles.checkboxSidemenu} className={`material-icons-outlined ${styles.icons} ${styles.strokedText}`} data-text="menu">
+                menu
+            </label>
             <Link href={"/"} passHref>
-                <div className={`${styles.title} ${styles.strokedText}`} data-text="MugiSus.com">MugiSus.com</div>
+                <div className={`${styles.title} ${styles.strokedText}`} data-text="MugiSus.com">
+                    MugiSus.com
+                </div>
             </Link>
-            <span className={`material-icons-outlined ${styles.icons} ${styles.strokedText}`} data-text="share">share</span>
+            <span className={`material-icons-outlined ${styles.icons} ${styles.strokedText}`} data-text="share">
+                share
+            </span>
         </header>
         <div className={styles.placeholder} />
 
@@ -18,7 +24,9 @@ const Header = () => (
         <label htmlFor={styles.checkboxSidemenu} className={styles.sidemenuBackground} />
         <div className={styles.sidemenu}>
             <div className={styles.background} />
-            <label htmlFor={styles.checkboxSidemenu} className={`material-icons-outlined ${styles.closeArrow} ${styles.strokedText}`} data-text="arrow_back">arrow_back</label>
+            <label htmlFor={styles.checkboxSidemenu} className={`material-icons-outlined ${styles.closeArrow} ${styles.strokedText}`} data-text="arrow_back">
+                arrow_back
+            </label>
             <Link href={"/"} passHref>
                 <h2 className={styles.strokedText} data-text="MugiSus.com">
                     MugiSus.com
