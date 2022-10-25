@@ -186,9 +186,9 @@ const Home = () => {
                     </div>
 
                     <p className={styles.text}>
-                        言語は主に JavaScript (HTML+CSS, Next.js) C# (Unity) がつかえます。 <br />
+                        言語は主に JavaScript/TypeScript (HTML+CSS, Next.js) C# (Unity) がつかえます。 <br />
                         フロントエンドがすきで、Web制作を始めゲーム制作にも注力しています。<br />
-                        使用しているエディタは VSCode で、インデントはスペース4つです。
+                        使用しているエディタは VSCode で、インデントはスペース4つです。開き波括弧({'{'})は改行しません。
                     </p>
                     <p className={styles.text}>
                         2021年度 <Link href="https://jr.mitou.org">U-17未踏ジュニア</Link> に「<Link href="https://jr.mitou.org/projects/2021/telport">TELPort/テルポート</Link>」で採択されました。<br />
