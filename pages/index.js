@@ -58,15 +58,19 @@ const Home = () => {
 				</title>
 				<meta
 					name="description"
-					content="国立木更津工業高等専門学校 情報工学科 の MugiSus です。これは むぎすす と発音し、麦煤 と書くこともあります。"
+					content="MugiSus のポートフォリオです。いろいろつくります"
 				/>
 			</Head>
 			
 			<main className={styles.main}>
+				<h1 style={{display: "none"}}>
+					MugiSus.com
+				</h1>
+
 				<div className={styles.sections} id="creations">
 					<div className={styles.titleContainer}>
 						<h1 className={styles.title}>
-							MugiSus
+							MugiSus&apos; Creations
 						</h1>
 						<h2 className={styles.subtitle}>
 							Artworks & Products
