@@ -13,29 +13,36 @@ import careersYaml from '../data/careers.yaml'
 import creationfeaturesYaml from '../data/creationfeatures.yaml'
 
 const featureNames = Object.keys(creationfeaturesYaml);
-const selectedFeatures = new Set(featureNames.filter(feature => creationfeaturesYaml[feature]["filter-default"]));
+// const selectedFeatures = new Set(featureNames.filter(feature => creationfeaturesYaml[feature]["filter-default"]));
 
 const doesFilterHas = (featureSet, filterSet) => [...filterSet].every(feature => featureSet.has(feature));
 const caluclateAge = (birthday) => new Date(Date.now() - new Date(birthday)).getUTCFullYear() - 1970;
 
 const Home = () => {
+	const [selectedFeatures, setSelectedFeatures] = useState(
+		new Set(featureNames.filter(feature => creationfeaturesYaml[feature]["filter-default"]))
+	);
 	const [filteredCreations, setFilteredCreations] = useState(
-		creationsYaml.filter(creation => doesFilterHas(new Set(creation.features), selectedFeatures)).sort((a, b) => b.date - a.date)
+		creationsYaml.filter(creation => 
+			doesFilterHas(new Set(creation.features), selectedFeatures)
+		).sort((a, b) => b.date - a.date)
 	);
 	
 	const creationFeatureFilterChange = (event) => {
-		event.currentTarget.parentElement.classList.toggle(styles.selected, event.currentTarget.checked);
-		console.log(event.currentTarget.dataset.feature);
-		
+		const newSelectedFeatures = new Set(selectedFeatures);
 		if (event.currentTarget.checked)
-			selectedFeatures.add(event.currentTarget.dataset.feature);
+			newSelectedFeatures.add(event.currentTarget.dataset.feature);
 		else
-			selectedFeatures.delete(event.currentTarget.dataset.feature);
+			newSelectedFeatures.delete(event.currentTarget.dataset.feature);
 		
-		const filteredResult = creationsYaml.filter(creation => doesFilterHas(new Set(creation.features), selectedFeatures)).sort((a, b) => b.date - a.date);
+		const filteredResult = creationsYaml.filter(creation => 
+			doesFilterHas(new Set(creation.features), newSelectedFeatures)
+		).sort((a, b) => b.date - a.date);
+
 		setFilteredCreations(filteredResult);
+		setSelectedFeatures(newSelectedFeatures);
 		
-		console.log(selectedFeatures, filteredResult);
+		console.log(newSelectedFeatures, filteredResult);
 	}
 
 	useEffect(() => {
