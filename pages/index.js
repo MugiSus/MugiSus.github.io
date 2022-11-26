@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { format as dateformat } from 'date-fns'
 import styles from '../styles/Home.module.scss'
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import CreationComponent from '../components/creationComponent.js';
 
@@ -12,42 +12,40 @@ import articlesYaml from '../data/articles.yaml'
 import careersYaml from '../data/careers.yaml'
 import creationfeaturesYaml from '../data/creationfeatures.yaml'
 
+const featureNames = Object.keys(creationfeaturesYaml);
+const selectedFeatures = new Set(featureNames.filter(feature => creationfeaturesYaml[feature]["filter-default"]));
+
+const doesFilterHas = (featureSet, filterSet) => [...filterSet].every(feature => featureSet.has(feature));
+const caluclateAge = (birthday) => new Date(Date.now() - new Date(birthday)).getUTCFullYear() - 1970;
+
 const Home = () => {
-	const featureNames = Object.keys(creationfeaturesYaml);
-	const selectedFeatures = new Set(featureNames.filter(feature => creationfeaturesYaml[feature]["filter-default"]));
-
-	const doesFilterHas = (featureSet, filter) => [...filter].every(feature => featureSet.has(feature));
-
+	const [filteredCreations, setFilteredCreations] = useState(
+		creationsYaml.filter(creation => doesFilterHas(new Set(creation.features), selectedFeatures)).sort((a, b) => b.date - a.date)
+	);
+	
 	const creationFeatureFilterChange = (event) => {
 		event.currentTarget.parentElement.classList.toggle(styles.selected, event.currentTarget.checked);
+		console.log(event.currentTarget.dataset.feature);
 		
 		if (event.currentTarget.checked)
 			selectedFeatures.add(event.currentTarget.dataset.feature);
 		else
 			selectedFeatures.delete(event.currentTarget.dataset.feature);
 		
-		let matchCount = 0;
-		document.querySelectorAll(`.${styles.creationComponents}`).forEach(creationComponent => // we don't use reduce here because it is undefined in NodeList
-			matchCount += creationComponent.classList.toggle(
-				styles.visible,
-				doesFilterHas(new Set(creationComponent.dataset.features.split(",")), selectedFeatures)
-			)
-		);
-
-		document.querySelector(`.${styles.noCreationsMatch}`).classList.toggle(styles.visible, matchCount === 0);
-		console.log(selectedFeatures, matchCount);
+		const filteredResult = creationsYaml.filter(creation => doesFilterHas(new Set(creation.features), selectedFeatures)).sort((a, b) => b.date - a.date);
+		setFilteredCreations(filteredResult);
+		
+		console.log(selectedFeatures, filteredResult);
 	}
 
-	const caluclateAge = (birthday) => new Date(Date.now() - new Date(birthday)).getUTCFullYear() - 1970;
-
 	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			let background = document.getElementsByClassName("background")[0];
+		if (typeof window === 'undefined') return;
 
-			window.addEventListener("scroll", () => {
-				background.style.backgroundPositionY = `${window.scrollY * -0.2}px`;
-			});
-		}
+		let background = document.getElementsByClassName("background")[0];
+
+		window.addEventListener("scroll", () => {
+			background.style.backgroundPositionY = `${window.scrollY * -0.2}px`;
+		});
 	}, [])
 
 	return (
@@ -103,24 +101,26 @@ const Home = () => {
 					
 					<ul className={styles.creationUl}>
 						{
-							creationsYaml.sort((a, b) => b.date.getTime() - a.date.getTime()).map((creation, index) => (
-								<article 
-									key={index}
-									className={`${styles.creationComponents} ${doesFilterHas(new Set(creation.features), selectedFeatures) ? styles.visible : ""}`}
-									data-features={creation.features}
-								>
-									<CreationComponent {...creation} />
-								</article>
-							))
+							filteredCreations.length === 0 ? (
+								<div className={styles.noCreationsMatch}>
+									<span className={`material-icons-outlined ${styles.noCreationsMatchIcon}`}>
+										filter_alt
+									</span>
+									<span className={styles.noCreationsMatchText}>
+										No Creations Match Your Filter (!)
+									</span>
+								</div>
+							) : (
+								filteredCreations.map((creation, index) => (
+									<article 
+										key={index}
+										className={styles.creationComponents}
+									>
+										<CreationComponent {...creation} />
+									</article>
+								))
+							)
 						}
-						<div className={styles.noCreationsMatch}>
-							<span className={`material-icons-outlined ${styles.noCreationsMatchIcon}`}>
-								filter_alt
-							</span>
-							<span className={styles.noCreationsMatchText}>
-								No Creations Match Your Filter (!)
-							</span>
-						</div>
 					</ul>
 				</div>
 				

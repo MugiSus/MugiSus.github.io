@@ -130,11 +130,7 @@
 
 	.creationComponents {
 		display: none;
-		
-		&.visible {
-			display: block;
-			animation: show 1s;
-		}
+		display: block;
 	}
 
 	.noCreationsMatch {
@@ -145,6 +141,7 @@
 		min-height: 10rem;
 		padding: 0 0.5rem;
 		grid-column: 1 / 3;
+		display: flex;
 
 		.noCreationsMatchIcon {
 			opacity: 30%;
@@ -159,10 +156,6 @@
 			font-size: 1.5rem;
 			font-weight: 400;
 			letter-spacing: 0.1rem;
-		}
-
-		&.visible {
-			display: flex;
 		}
 	}
 }
