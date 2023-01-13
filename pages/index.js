@@ -188,10 +188,10 @@ const Home = () => {
 						<div className={styles.oyagiIconBorder}>
 							<img
 								className={styles.oyagiIcon}
-								src="/oyagi-icon.png"
+								src="/oyagi-icon-gif.gif"
 								alt="MugiSus"
-								height="192"
-								width="192"
+								height="256"
+								width="256"
 							/>
 						</div>
 					</div>
