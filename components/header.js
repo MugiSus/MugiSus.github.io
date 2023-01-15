@@ -9,7 +9,7 @@ const Header = () => (
             <label htmlFor={styles.checkboxSidemenu} className={`material-icons-outlined ${styles.icons} ${styles.strokedText}`} data-text="menu">
                 menu
             </label>
-            <Link href={"/"} passHref>
+            <Link href={"#top"} passHref>
                 <div className={`${styles.title} ${styles.strokedText}`} data-text="MugiSus.com">
                     MugiSus.com
                 </div>
