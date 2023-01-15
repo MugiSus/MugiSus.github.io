@@ -58,14 +58,19 @@
 
 .oyagiIconContainer {
 	display: inline-block;
-	margin: 0.6rem 0;
-	line-height: 0;
-	padding: 1rem;
+	overflow: hidden;
 	border-radius: 0.8rem;
-	background-size: 66% 66%;
-	background-position: center;
+	margin: 0.6rem 0;
 	background-color: var(--color-blank);
-	background: var(--image-bg);
+	line-height: 0;
+	z-index: -10000;
+
+	.oyagiIconBorder {
+		padding: 1rem;
+		background: var(--image-bg);
+		background-size: 66% 66%;
+		background-position: center;
+	}
 }
 
 .creationsFeatureFiltersContainer {

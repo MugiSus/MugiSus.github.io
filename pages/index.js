@@ -185,13 +185,15 @@ const Home = () => {
 					</p>
 
 					<div className={styles.oyagiIconContainer}>
-						<img
-							className={styles.oyagiIcon}
-							src="/oyagi-icon-gif.gif"
-							alt="MugiSus"
-							height="256"
-							width="256"
-						/>
+						<div className={styles.oyagiIconBorder}>
+							<img
+								className={styles.oyagiIcon}
+								src="/oyagi-icon-gif.gif"
+								alt="MugiSus"
+								height="256"
+								width="256"
+							/>
+						</div>
 					</div>
 
 					<p className={styles.text}>
