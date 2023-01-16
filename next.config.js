@@ -11,14 +11,14 @@ module.exports = {
 		)
 		return config
 	},
-	async redirects() {
-		return [
-			{
-				source: '/i',
-				destination: 'https://virtualcard-mugisus.vercel.app',
-				permanent: true,
-			},
-		]
-	},
+	// async redirects() {
+	// 	return [
+	// 		{
+	// 			source: '/i',
+	// 			destination: 'https://virtualcard-mugisus.vercel.app',
+	// 			permanent: true,
+	// 		},
+	// 	]
+	// },
     trailingSlash: true,
 }
