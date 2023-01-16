@@ -13,9 +13,9 @@
     date: 2023-01-17
     description: |
         少し前に3日間ほど入院し、それからあまり開発のモチベーションが戻ってこなかったのと、大量に学校の課題が溜まってしまったので、それらから気を紛らわすために療養も兼ねて作ったものです。
-        週末に美大の卒展へ足を運び、大量のインスピレーションを得、急に名刺をデザインしたくなり、早速デザインしたはいいものの、今度はそれを配布する手段がなかったので、3Dの動く名刺を作って仮想配布してみようということでできた作品です。
+        週末に美大の卒展へ足を運び、大量のインスピレーションを得、急に名刺をデザインしたくなり、早速デザインしたはいいものの、今度はそれを配布する手段がなかったので、3Dの動く名刺を作って仮想配布してみようということでできました。
         名刺に描かれているバーコードとQRコードは、それぞれこのページにリダイレクトされています。実際にこの名刺を現実で配布し、現実と画面がリンクするような演出ができたらいいなと思います。
-    features: [powered-by-webgl, responsive, work-in-progress]
+    features: [pickup, powered-by-webgl, responsive, work-in-progress]
 
 -
     url: https://openprocessing.org/sketch/1788651
@@ -86,7 +86,7 @@
         WebGLで実装してあるのでかなり速いです。
         左クリックで追加、右クリックで再生・停止、右クリック+ドラッグで視点を移動します。
         そのうちスマートフォンにも対応すると思います。
-    features: [pickup, powered-by-webgl]
+    features: [powered-by-webgl]
 -
     url: https://telport.mugisus.com/
     image: creations/telport.png
