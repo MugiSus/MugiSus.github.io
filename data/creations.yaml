@@ -9,7 +9,7 @@
 -
     url: https://virtualcard-mugisus.vercel.app/
     image: creations/virtual-card.png
-    title: virtual-card
+    title: Virtual Card
     date: 2023-01-17
     description: |
         少し前に3日間ほど入院し、それからあまり開発のモチベーションが戻ってこなかったのと、大量に学校の課題が溜まってしまったので、それらから気を紛らわすために療養も兼ねて作ったものです。
