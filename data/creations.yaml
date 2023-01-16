@@ -7,6 +7,17 @@
 #   features: [string]
 
 -
+    url: https://virtualcard-mugisus.vercel.app/
+    image: creations/virtual-card.png
+    title: virtual-card
+    date: 2023-01-17
+    description: |
+        少し前に3日間ほど入院し、それからあまり開発のモチベーションが戻ってこなかったのと、大量に学校の課題が溜まってしまったので、それらから気を紛らわすために衝動で作ったものです。
+        週末に美大の卒展へ足を運び、大量のインスピレーションを得、急に名刺をデザインしたくなり、早速デザインしたはいいものの、今度はそれを配布する手段がなかったので、3Dの動く名刺を作って仮想配布してみようということでできた作品です。
+        名刺に描かれているバーコードとQRコードは、それぞれこのページにリダイレクトされています。実際にこの名刺を現実で配布し、現実と画面がリンクするような演出ができたらいいなと思います。
+    features: [powered-by-webgl, work-in-progress]
+
+-
     url: https://openprocessing.org/sketch/1788651
     image: creations/pata-drop.png
     title: pata-drop
