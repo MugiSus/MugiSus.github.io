@@ -18,7 +18,7 @@ const Header = () => (
                 share
             </span>
         </header>
-        <div className={styles.placeholder} />
+        {/* <div className={styles.placeholder} /> */}
 
         <input type="checkbox" className={styles.checkboxSidemenu} id={styles.checkboxSidemenu} />
         <label htmlFor={styles.checkboxSidemenu} className={styles.sidemenuBackground} />

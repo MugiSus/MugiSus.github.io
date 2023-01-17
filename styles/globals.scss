@@ -53,3 +53,8 @@ a {
     background-image: var(--image-bg);
     background-size: 100vw 400vw;
 }
+
+.main-container {
+	overflow: scroll;
+	height: calc(100vh - var(--header-height));
+}

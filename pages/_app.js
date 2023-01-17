@@ -22,9 +22,11 @@ function MyApp({ Component, pageProps }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />
-			<Component {...pageProps} />
-            <Footer />
-            <div className="background">&nbsp;</div>
+            <div className="main-container">
+                <Component {...pageProps} />
+                <Footer />
+                <div className="background">&nbsp;</div>
+            </div>
 		</div>
 	)
 }
