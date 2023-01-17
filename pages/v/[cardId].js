@@ -1,14 +1,14 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useRouter } from 'next/router'
+import { useEffect } from 'react';
 
 export default function Redirector() {
     const router = useRouter();
-
-    if (typeof window === 'undefined') {
-        return null;
-    }
-    
     const { cardId } = router.query;
-    router.push(`../v-card/${cardId ?? ''}`);
     
+    useEffect(() => {
+        router.push(`../v-card/${cardId ?? ''}`);
+    }, [router.isReady]);
+        
     return null;
 }
