@@ -8,9 +8,8 @@ export default function Redirector() {
     
     useEffect(() => {
         console.log(id);
-        if (id) {
+        if (id) 
             router.push(`../v-card?id=${id}`);
-        }
     }, [router.isReady]);
         
     return null;
