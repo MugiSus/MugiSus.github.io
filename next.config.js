@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 
+const vRedirectorIds = [
+	"22aq",
+]
+
 module.exports = {
     reactStrictMode: true,
 	webpack: function (config) {
@@ -11,14 +15,14 @@ module.exports = {
 		)
 		return config
 	},
-	// async redirects() {
-	// 	return [
-	// 		{
-	// 			source: '/i',
-	// 			destination: 'https://virtualcard-mugisus.vercel.app',
-	// 			permanent: true,
-	// 		},
-	// 	]
-	// },
+	exportPathMap: function() {
+		const paths = {};
+		vRedirectorIds.forEach(id => paths[`/show/${id}`] = {
+			page: '/show/[id]',
+			query: { id: id } }
+		);
+		return paths;
+	},
     trailingSlash: true,
 }
+
