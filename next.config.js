@@ -18,6 +18,9 @@ module.exports = {
 	async exportPathMap() {
 		const paths = {
 			'/': { page: '/' },
+			'/404': { page: '/404' },
+			'/418': { page: '/418' },
+			'/500': { page: '/500' },
 		};
 		vRedirectorIds.forEach(id => paths[`/v/${id}`] = {
 			page: '/v/[id]',
