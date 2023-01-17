@@ -7,6 +7,6 @@ export default function IRedirector() {
         return null;
     }
     
-    router.push('https://virtualcard-mugisus.vercel.app');
+    router.push('https://virtual-card-mugisus.vercel.app');
     return null;
 }
