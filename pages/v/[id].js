@@ -4,10 +4,13 @@ import { useEffect } from 'react';
 
 export default function Redirector() {
     const router = useRouter();
-    const { cardId } = router.query;
+    const { id } = router.query;
     
     useEffect(() => {
-        router.push(`../v-card/${cardId ?? ''}`);
+        console.log(id);
+        if (id) {
+            router.push(`../v-card?id=${id}`);
+        }
     }, [router.isReady]);
         
     return null;
