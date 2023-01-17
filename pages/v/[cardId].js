@@ -1,12 +1,14 @@
 import { useRouter } from 'next/router'
 
-export default function IRedirector() {
+export default function Redirector() {
     const router = useRouter();
 
     if (typeof window === 'undefined') {
         return null;
     }
     
-    router.push('https://virtual-card-mugisus.vercel.app');
+    const { cardId } = router.query;
+    router.push(`../v-card/${cardId ?? ''}`);
+    
     return null;
 }
