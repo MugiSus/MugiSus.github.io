@@ -2,7 +2,7 @@
 import { useRouter } from 'next/router'
 import { useEffect } from 'react';
 
-export default function Redirector() {
+function Redirector() {
     const router = useRouter();
     const { id } = router.query;
     
@@ -13,3 +13,10 @@ export default function Redirector() {
         
     return null;
 }
+
+// add getInitialProps to v/[id].js
+Redirector.getInitialProps = async () => {
+    return {};
+}
+
+export default Redirector;
