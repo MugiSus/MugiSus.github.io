@@ -17,8 +17,8 @@ module.exports = {
 	},
 	exportPathMap() {
 		const paths = {};
-		vRedirectorIds.forEach(id => paths[`/show/${id}`] = {
-			page: '/show/[id]',
+		vRedirectorIds.forEach(id => paths[`/v/${id}`] = {
+			page: '/v/[id]',
 			query: { id: id } }
 		);
 		return paths;
