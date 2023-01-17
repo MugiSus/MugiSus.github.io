@@ -7,7 +7,7 @@ export default function Redirector() {
     
     useEffect(() => {
         const cardId = Object.keys(router.query)?.[0];
-        if (cardId) router.push(`../v-card?${cardId}`);
+        if (cardId) router.push(`../v-card/?id=${cardId}`);
     }, [router.isReady]);
     
     return null;
