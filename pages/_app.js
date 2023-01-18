@@ -23,6 +23,7 @@ function MyApp({ Component, pageProps }) {
             </Head>
             <Header />
             <div className="main-container">
+                <div id="top" />
                 <Component {...pageProps} />
                 {/* <Footer /> */}
                 <div className="background">&nbsp;</div>

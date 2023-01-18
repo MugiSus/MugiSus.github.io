@@ -57,4 +57,5 @@ a {
 .main-container {
 	overflow: scroll;
 	height: calc(100vh - var(--header-height));
+	scroll-behavior: smooth;
 }
