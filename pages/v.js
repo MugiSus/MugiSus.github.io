@@ -12,6 +12,6 @@ export default function VirtualCardIframe() {
     // }, [router.isReady]);
     
     return (
-        <iframe src="https://www.mugisus.com/v-card?id=22aq" className={styles.frame} />
+        <iframe src="https://www.mugisus.com/v-card?id=22aq&embed=true" className={styles.frame} />
     );
 }
