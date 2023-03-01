@@ -3,8 +3,19 @@ import Head from 'next/head'
 import Header from '../components/header.js'
 import Footer from '../components/footer.js'
 import '../styles/globals.scss'
+import { useEffect } from 'react'
 
 function MyApp({ Component, pageProps }) {
+	useEffect(() => {
+		if (typeof window === 'undefined') return;
+
+		const background = document.querySelector(".background");
+
+		background.parentElement.addEventListener("scroll", (event) => {
+			background.style.backgroundPositionY = `${event.currentTarget.scrollTop * -0.25}px`;
+		});
+	}, [])
+
 	return (
 		<div>
             <Head>

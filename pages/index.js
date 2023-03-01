@@ -45,16 +45,6 @@ const Home = () => {
 		console.log(newSelectedFeatures, filteredResult);
 	}
 
-	useEffect(() => {
-		if (typeof window === 'undefined') return;
-
-		let background = document.getElementsByClassName("background")[0];
-
-		window.addEventListener("scroll", () => {
-			background.style.backgroundPositionY = `${window.scrollY * -0.2}px`;
-		});
-	}, [])
-
 	return (
 		<div>
 			<Head>
