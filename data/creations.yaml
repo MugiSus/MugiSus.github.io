@@ -46,7 +46,7 @@
     description: |
         あなたが手に入れることのできる最も正確な時計です。GPSで緯度と経度を取得し、僅かな時差を可視化します。GPSを有効にしてお楽しみください。
         (自作パッケージ "world-timestamp" を使用しています。)
-    features: [pickup, powered-by-webgl, responsive]
+    features: [pickup, powered-by-webgl, pwa, responsive]
 
 -
     url: https://reactmood.vercel.app/
