@@ -8,7 +8,6 @@ export default function VirtualCardIframe() {
     const router = useRouter();
 
     const cardId = Object.keys(router.query)?.[0] ?? "none";
-    console.log(cardId)
     
     return (
         <div className={styles.container}>
