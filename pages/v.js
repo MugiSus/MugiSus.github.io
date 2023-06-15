@@ -16,7 +16,7 @@ export default function VirtualCardIframe() {
                 <title>Virtual Card</title>
             </Head>
             <iframe
-                src={`https://v-card-gilt.vercel.app/?id=${cardId}&embed=true`}
+                src={`https://www.mugisus.com/v-card/?id=${cardId}&embed=true`}
                 className={styles.frame}
             />
         </div>
