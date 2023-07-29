@@ -13,7 +13,8 @@ $sidemenuSlideOut: 0.6s cubic-bezier(0.6, 0.05, 0.6, 0.4);
     align-items: center;
     background-color: var(--color-blank);
     overflow: hidden;
-    box-shadow: 0 0.2rem 0.4rem #00000032;
+    position: relative;
+    box-shadow: 0 0.2rem 0.4rem #00000040;
 
     .title {
         z-index: 2000;
