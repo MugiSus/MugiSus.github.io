@@ -12,6 +12,8 @@ import articlesYaml from '../data/articles.yaml'
 import careersYaml from '../data/careers.yaml'
 import creationfeaturesYaml from '../data/creationfeatures.yaml'
 
+import Footer from '../components/footer';
+
 const featureNames = Object.keys(creationfeaturesYaml);
 // const selectedFeatures = new Set(featureNames.filter(feature => creationfeaturesYaml[feature]["filter-default"]));
 
@@ -189,11 +191,14 @@ const Home = () => {
 					<p className={styles.text}>
 						言語は主に JavaScript/TypeScript (HTML+CSS, Next.js) C# (Unity) がつかえます。 <br />
 						フロントエンドがすきで、Web制作を始めゲーム制作にも注力しています。<br />
-						使用しているエディタは VSCode で、インデントはスペース4つです。開き波括弧({'{'})は改行しません。
+						使用しているエディタは VSCode で、インデントはスペース4つです。開き波括弧({'{'})は改行しません。<br />
 					</p>
 					<p className={styles.text}>
 						2021年度 <Link href="https://jr.mitou.org">U-17未踏ジュニア</Link> に「<Link href="https://jr.mitou.org/projects/2021/telport">TELPort/テルポート</Link>」で採択されました。<br />
 						同年未踏ジュニアスーパークリエータ認定を受けています。
+					</p>
+					<p className={styles.text}>
+						争いは好みではありません。
 					</p>
 					<p className={styles.text}>
 						デザインとお絵描きがそれぞれ少しずつできます。
@@ -226,6 +231,7 @@ const Home = () => {
 					</ul>
 				</div>
 			</main>
+			{/* <Footer /> */}
 		</div>
 	);
 }

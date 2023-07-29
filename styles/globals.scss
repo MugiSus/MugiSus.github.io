@@ -1,8 +1,8 @@
 :root {
-	--color-lightmode-green: #BBE289;
-	--color-lightmode-purple: #B9ACDE;
-	--color-lightmode-blank: #FDFDFD;
-	--color-lightmode-content: #101010;
+	--color-lightmode-green: #aeea60;
+	--color-lightmode-purple: #a992e9;
+	--color-lightmode-blank: #FFFFFF;
+	--color-lightmode-content: #000000;
 	--image-lightmode-bg: url('../public/bg-light.svg');
 
 	--color-green: var(--color-lightmode-green);
@@ -12,12 +12,12 @@
 	--color-border: #C0C0C0;
 	--color-pale-green: #E4F3D0;
 	--color-pale-purple: #E3DEF2;
-	--color-dark-green: #6E8C46;
-	--color-dark-purple: #685F82;
-	--color-selected: #504b44;
+	--color-dark-green: #3e5421;
+	--color-dark-purple: #30274a;
+	--color-selected: #000000;
 	--image-bg: var(--image-lightmode-bg);
 
-	--header-height: 4rem;
+	--header-height: 3.5rem;
 }
 
 html,
@@ -48,8 +48,8 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 10%;
-	background-repeat: repeat;
+    opacity: 100%;
+		background-repeat: repeat;
     background-image: var(--image-bg);
     background-size: 100vw 400vw;
 }

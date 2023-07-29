@@ -60,6 +60,9 @@ const Header = () => (
                     <img className={styles.socialLinkImage} src="/link-github.svg" alt="GitHub" />
                 </Link>
             </div>
+            <div className={styles.strokedText} data-text="Copyright ©︎ 2023 MugiSus">
+                Copyright ©︎ 2023 MugiSus
+            </div>
         </div>
     </div>
 )
