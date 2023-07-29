@@ -1,7 +1,8 @@
-<svg width="400" height="400" viewBox="0 0 400 400" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 400V350L350 0H400V50L50 400H0Z" fill="#B9ACDE"/>
-<path d="M250 400H150L400 150V250L250 400Z" fill="#BBE289"/>
-<path d="M150 0H250L0 250V150L150 0Z" fill="#BBE289"/>
-<path d="M0 0H50L0 50V0Z" fill="#B9ACDE"/>
-<path d="M400 400H350L400 350V400Z" fill="#B9ACDE"/>
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" preserveAspectRatio="none"
+  xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 400V350L350 0H400V50L50 400H0Z" fill="#a992e9" />
+  <path d="M250 400H150L400 150V250L250 400Z" fill="#a3e74a" />
+  <path d="M150 0H250L0 250V150L150 0Z" fill="#a3e74a" />
+  <path d="M0 0H50L0 50V0Z" fill="#a992e9" />
+  <path d="M400 400H350L400 350V400Z" fill="#a992e9" />
 </svg>

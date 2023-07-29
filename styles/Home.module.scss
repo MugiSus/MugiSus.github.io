@@ -10,8 +10,10 @@
 }
 
 .titleContainer {
-	padding: 4rem 0 2rem;
+	margin: 4rem 0 2rem;
 	user-select: text;
+	background-color: var(--color-blank);
+	padding: 0.5rem 0;
 
 	.title {
 		display: inline-block;
@@ -38,6 +40,8 @@
 	line-height: 2.2rem;
 	margin: 1.5rem 0rem;
 	user-select: text;
+	background-color: var(--color-blank);
+
 
 	a {
 		text-decoration: underline;
@@ -49,7 +53,8 @@
 
 	code {
 		font-family: Inconsolata, 'Zen Kaku Gothic New';
-		background-color: #E4E8DFb0;
+		background-color: var(--color-pale-green);
+		color: var(--color-dark-green);
 		padding: 0.3rem 0.4rem;
 		margin: 0 0.5rem;
 		border-radius: 0.2rem;
@@ -212,10 +217,11 @@
 	flex-direction: column;
 	gap: 0.2rem;
 	margin: 0;
-    padding: 0;
-    list-style: none;
+	padding: 0;
+	list-style: none;
 	line-height: 1.8rem;
 	user-select: text;
+	background-color: var(--color-blank);
 
 	li {
 		display: flex;
