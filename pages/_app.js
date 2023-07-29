@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
 		const background = document.querySelector(".background");
 
 		background.parentElement.addEventListener("scroll", (event) => {
-			background.style.backgroundPositionY = `${event.currentTarget.scrollTop * -0.25}px`;
+			background.style.backgroundPositionY = `${event.currentTarget.scrollTop * -0.2}px`;
 		});
 	}, [])
 
