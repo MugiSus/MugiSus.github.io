@@ -11,7 +11,7 @@ $sidemenuSlideOut: 0.6s cubic-bezier(0.6, 0.05, 0.6, 0.4);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--color-content);
+    background-color: var(--color-blank);
     overflow: hidden;
     box-shadow: 0 0.2rem 0.4rem #00000032;
 
@@ -171,4 +171,10 @@ $sidemenuSlideOut: 0.6s cubic-bezier(0.6, 0.05, 0.6, 0.4);
     z-index: -10000;
     position: absolute;
     -webkit-text-stroke: 6px var(--color-blank);
+}
+
+@media (prefers-color-scheme: dark) {
+    .headerContainer {
+        background-color: var(--color-content);
+    }
 }
