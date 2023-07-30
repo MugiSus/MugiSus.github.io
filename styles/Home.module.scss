@@ -243,6 +243,13 @@
 	}
 }
 
+.copyright {
+	background-color: var(--color-blank);
+	text-align: center;
+	line-height: 2.2rem;
+	margin: 8rem 0 4rem;
+}
+
 @media screen and (max-width: 800px) {
 	.creationUl {
 		grid-template-columns: 1fr;

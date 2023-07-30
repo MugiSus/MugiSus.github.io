@@ -230,8 +230,10 @@ const Home = () => {
 						</li>
 					</ul>
 				</div>
+				<p className={styles.copyright}>
+					Copyright ©︎ 2023 MugiSus
+				</p>
 			</main>
-			{/* <Footer /> */}
 		</div>
 	);
 }
