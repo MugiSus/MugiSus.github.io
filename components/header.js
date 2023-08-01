@@ -9,7 +9,7 @@ const Header = () => {
     const isTop = router.pathname === "/";
 
     return (
-        <div>
+        <>
             <header className={ isTop ? `${styles.headerContainer} ${styles.rounded}` : styles.headerContainer }>
                 <div className={styles.background} />
                 <label htmlFor={styles.checkboxSidemenu} className={`material-icons-outlined ${styles.icons} ${styles.strokedText}`} data-text="menu">
@@ -69,7 +69,7 @@ const Header = () => {
                     Copyright ©︎ 2023 MugiSus
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

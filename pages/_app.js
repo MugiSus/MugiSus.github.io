@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
 	useEffect(() => {
 		if (typeof window === 'undefined') return;
 
-		const background = document.querySelector(".background");
+        const background = document.querySelector(".background");
 
 		background.parentElement.addEventListener("scroll", (event) => {
 			background.style.backgroundPositionY = `${event.currentTarget.scrollTop * -0.2}px`;
@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
 	}, [])
 
 	return (
-		<div>
+		<>
             <Head>
                 <meta property="og:title" content="MugiSus.com" />
                 <meta property="og:description" content="The Portfolio of MugiSus" />
@@ -32,14 +32,14 @@ function MyApp({ Component, pageProps }) {
                 <meta name="twitter:image" content="https://www.mugisus.com/oyagi-icon.png" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Header />
+            {/* <Footer /> */}
             <div className="main-container">
                 <div id="top" />
+                <Header />
                 <Component {...pageProps} />
-                {/* <Footer /> */}
                 <div className="background">&nbsp;</div>
             </div>
-		</div>
+		</>
 	)
 }
 
