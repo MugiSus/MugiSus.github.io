@@ -34,9 +34,7 @@ function MyApp({ Component, pageProps }) {
                 <Component {...pageProps} />
                 <div
                     className="background"
-                    style={{
-                        backgroundPositionY: backgroundPositionY,
-                    }}
+                    style={{backgroundPositionY}}
                 >
                     &nbsp;
                 </div>
