@@ -3,18 +3,10 @@ import Head from 'next/head'
 import Header from '../components/header.js'
 import Footer from '../components/footer.js'
 import '../styles/globals.scss'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 function MyApp({ Component, pageProps }) {
-	useEffect(() => {
-		if (typeof window === 'undefined') return;
-
-        const background = document.querySelector(".background");
-
-		background.parentElement.addEventListener("scroll", (event) => {
-			background.style.backgroundPositionY = `${event.currentTarget.scrollTop * -0.2}px`;
-		});
-	}, [])
+    const [backgroundPositionY, setBackgroundPositionY] = useState(0);
 
 	return (
 		<>
@@ -33,11 +25,21 @@ function MyApp({ Component, pageProps }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             {/* <Footer /> */}
-            <div className="main-container">
+            <div
+                className="main-container"
+                onScroll={(event) => setBackgroundPositionY(event.currentTarget.scrollTop * -0.2)}
+            >
                 <div id="top" />
                 <Header />
                 <Component {...pageProps} />
-                <div className="background">&nbsp;</div>
+                <div
+                    className="background"
+                    style={{
+                        backgroundPositionY: backgroundPositionY,
+                    }}
+                >
+                    &nbsp;
+                </div>
             </div>
 		</>
 	)
