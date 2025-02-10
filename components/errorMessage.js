@@ -5,6 +5,7 @@ const ErrorMessage = ({statusCode, title, message}) => (
     <div className={styles.container}>
         <Head>
             <title>{statusCode} - {title}</title>
+            <meta name="robots" content="noindex" />
         </Head>
 
         <div className={styles.message}>

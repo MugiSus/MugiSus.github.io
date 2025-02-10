@@ -23,6 +23,7 @@ function MyApp({ Component, pageProps }) {
                 <meta name="twitter:description" content="The Portfolio of MugiSus" />
                 <meta name="twitter:image" content="https://www.mugisus.com/oyagi-icon.png" />
                 <link rel="icon" href="/favicon.ico" />
+                <meta name="robots" content="noindex" />
             </Head>
             {/* <Footer /> */}
             <div
